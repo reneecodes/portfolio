@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Donut, Cross, Sparkle } from '@/components/ui/Stickers';
 
 export default function Projects() {
   const projects = [
@@ -30,8 +31,18 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 md:py-32 relative">
+      <div className="absolute top-20 right-10 w-12 h-12 text-pink-300/20 animate-spin-slow hidden md:block">
+        <Donut className="w-full h-full" />
+      </div>
+      <div className="absolute bottom-40 left-10 w-8 h-8 text-indigo-300/20 rotate-45 hidden md:block">
+        <Cross className="w-full h-full" />
+      </div>
+
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="mb-16 md:mb-24">
+        <div className="mb-16 md:mb-24 relative">
+          <div className="absolute -left-10 top-0 w-6 h-6 text-yellow-400/40 animate-pulse hidden md:block">
+            <Sparkle className="w-full h-full" />
+          </div>
           <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm">Portfolio</span>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
             Selected Work

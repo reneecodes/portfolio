@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Sparkle, Squiggle, Blob, StarBurst } from '@/components/ui/Stickers';
 
 export default function Hero() {
   return (
@@ -6,13 +7,30 @@ export default function Hero() {
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-500/10 dark:bg-indigo-500/5 blur-[100px] rounded-full -z-10 animate-fade-in" />
       
+      {/* Decorative Stickers */}
+      <div className="absolute top-20 right-[10%] w-12 h-12 text-yellow-400/30 animate-pulse delay-700 hidden md:block">
+        <Sparkle className="w-full h-full" />
+      </div>
+      <div className="absolute bottom-20 left-[5%] w-32 h-32 text-purple-300/10 -z-10 animate-fade-in-up delay-500 hidden md:block">
+        <Blob className="w-full h-full" />
+      </div>
+      <div className="absolute top-40 left-[15%] w-8 h-8 text-indigo-400/20 animate-bounce delay-1000 duration-[3000ms] hidden md:block">
+        <StarBurst className="w-full h-full" />
+      </div>
+
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-          <div className="flex-1 text-center md:text-left">
-            <div className="animate-fade-in-up">
-              <span className="inline-block py-1 px-3 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold tracking-wide uppercase mb-6 border border-indigo-100 dark:border-indigo-800">
+          <div className="flex-1 text-center md:text-left relative">
+            <div className="animate-fade-in-up relative">
+              <span className="inline-block py-1 px-3 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold tracking-wide uppercase mb-6 border border-indigo-100 dark:border-indigo-800 relative z-10">
                 Senior UX Designer
               </span>
+              
+              {/* Floating Squiggle near Badge */}
+              <div className="absolute -top-6 -left-6 w-12 h-6 text-indigo-300/40 -rotate-12 hidden md:block">
+                 <Squiggle className="w-full h-full" />
+              </div>
+
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 leading-[1.1]">
                 Designing for <br className="hidden md:block" />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
