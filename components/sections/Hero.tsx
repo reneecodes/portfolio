@@ -2,41 +2,56 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      {/* Background Gradients */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-indigo-500/10 dark:bg-indigo-500/5 blur-[100px] rounded-full -z-10 animate-fade-in" />
+      
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-6">
-              Hi, I&apos;m Renee Martinez <span className="text-indigo-600 wave-emoji inline-block">👋</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              UX Designer specializing in intuitive digital experiences.
-              <br className="hidden md:block" />
-              I turn <span className="text-indigo-600 font-semibold">information overload</span> into clarity.
+            <div className="animate-fade-in-up">
+              <span className="inline-block py-1 px-3 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-sm font-semibold tracking-wide uppercase mb-6 border border-indigo-100 dark:border-indigo-800">
+                Senior UX Designer
+              </span>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 leading-[1.1]">
+                Designing for <br className="hidden md:block" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
+                  human clarity.
+                </span>
+              </h1>
+            </div>
+            
+            <p className="animate-fade-in-up delay-100 text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
+              Hi, I'm Renee. I specialize in turning complex data into intuitive, 
+              <span className="text-gray-900 dark:text-gray-200 font-medium"> invisible </span> 
+              digital experiences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            
+            <div className="animate-fade-in-up delay-200 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="#projects"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-full text-white bg-gray-900 dark:bg-white dark:text-gray-900 overflow-hidden transition-transform hover:scale-105"
               >
-                View My Work
+                <span className="relative z-10">View My Work</span>
+                <div className="absolute inset-0 bg-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
               </Link>
               <a
                 href="#resume-google-doc-link-placeholder"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-gray-200 dark:border-gray-700 text-base font-medium rounded-full text-gray-700 dark:text-gray-200 bg-transparent hover:bg-gray-50 dark:hover:bg-gray-800 md:py-4 md:text-lg transition-all"
+                className="inline-flex items-center justify-center px-8 py-3.5 border border-gray-200 dark:border-gray-800 text-base font-medium rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors"
               >
                 Download Resume
               </a>
             </div>
           </div>
           
-          <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+          <div className="flex-1 flex justify-center md:justify-end animate-fade-in-up delay-300">
+            <div className="relative w-64 h-64 md:w-[400px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 z-10" />
               {/* Placeholder Image */}
-              <div className="w-full h-full bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900 dark:to-purple-900 flex items-center justify-center">
-                <span className="text-6xl">👩🏻‍💻</span>
+              <div className="w-full h-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center relative">
+                <span className="text-8xl filter grayscale hover:grayscale-0 transition-all duration-500">👩🏻‍💻</span>
               </div>
             </div>
           </div>

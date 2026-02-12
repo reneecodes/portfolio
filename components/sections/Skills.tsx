@@ -15,26 +15,30 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center mb-16">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Expertise</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+    <section id="skills" className="py-24 md:py-32 bg-gray-50 dark:bg-gray-900/50 relative">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <div className="mb-16">
+           <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm">Expertise</span>
+           <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
             Skills & Tools
-          </p>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {skillCategories.map((category) => (
-            <div key={category.title} className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-100 dark:border-gray-700 pb-2">
+          {skillCategories.map((category, idx) => (
+            <div 
+              key={category.title} 
+              style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+              className={`bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 hover:border-indigo-100 dark:hover:border-indigo-900/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up`}
+            >
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span 
                     key={skill} 
-                    className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300"
+                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-gray-50 text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-indigo-900/20 dark:hover:text-indigo-300 transition-colors cursor-default border border-gray-100 dark:border-gray-700"
                   >
                     {skill}
                   </span>

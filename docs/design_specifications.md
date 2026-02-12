@@ -1,72 +1,74 @@
-# 🎨 Design Specifications
+# 🎨 Design Specifications (Revamped)
 
 ## 1. Overview
-This document outlines the design principles and visual style for Renee Martinez's portfolio. The goal is to reflect her expertise in simplifying complex information and creating intuitive experiences.
+This document outlines the design principles and visual style for Renee Martinez's portfolio. The goal is to reflect her expertise in simplifying complex information and creating intuitive experiences, with a focus on **sophistication**, **subtlety**, and **modernity**.
 
-## 2. Target Audience
-- **Primary:** Hiring managers, recruiters, and potential clients looking for a Senior/Lead UX Designer.
-- **Secondary:** Fellow designers and developers interested in collaboration.
+## 2. Design Philosophy
+- **"Invisible Design":** The interface should recede, letting the content shine.
+- **Sophistication through Subtlety:** Use micro-interactions and soft gradients rather than loud colors.
+- **Clutter-Free:** Radical use of whitespace to guide the eye.
 
-## 3. Brand Identity
-- **Keywords:** Intuitive, Clean, Professional, Data-Driven, Empathetic.
-- **Vibe:** "The best designs feel like they aren't even there."
-- **Visual Style:** Minimalist, high-contrast, with subtle interactions to show attention to detail.
+## 3. Typography
+Using **Geist Sans** (Next.js default) for a clean, highly legible interface.
 
-## 4. Color Palette
-A clean, modern palette that emphasizes content and readability.
+- **Primary Font:** Geist Sans
+- **Monospace:** Geist Mono (for technical details)
 
-| Role | Color Name | Hex Code | Usage |
-|------|------------|----------|-------|
-| **Primary** | **Midnight Slate** | `#0f172a` | Main text, headings, strong borders. |
-| **Secondary** | **Cloud White** | `#f8fafc` | Backgrounds, cards. |
-| **Accent** | **Electric Indigo** | `#6366f1` | CTAs, links, active states, key highlights. |
-| **Neutral** | **Cool Gray** | `#94a3b8` | Subtitles, secondary text, borders. |
+### Hierarchy
+- **Display (Hero H1):** `text-5xl` to `text-7xl`, `font-bold`, `tracking-tight` (-0.02em).
+- **Section Headings (H2):** `text-3xl` to `text-4xl`, `font-semibold`, `tracking-tight`.
+- **Subheadings (H3):** `text-xl`, `font-medium`, `text-gray-600` (Light) / `text-gray-400` (Dark).
+- **Body:** `text-base` or `text-lg`, `leading-relaxed` (1.75), `font-normal`.
+- **Small/Meta:** `text-sm`, `font-medium`, `uppercase`, `tracking-wider`.
 
-## 5. Typography
-Using **Geist Sans** (Next.js default) or **Inter** for a clean, highly legible interface.
+## 4. Color Palette & Gradients
+A refined palette moving beyond flat colors to subtle depth.
 
-- **Headings (H1, H2, H3):** Bold, tight letter spacing.
-- **Body Text:** Regular weight, comfortable line height (1.6) for readability.
-- **Monospace:** For technical skills or code references if needed.
+### Core Colors
+| Role | Color Name | Hex Code (Light) | Hex Code (Dark) |
+|------|------------|------------------|-----------------|
+| **Background** | **Canvas** | `#ffffff` | `#0a0a0a` |
+| **Surface** | **Glass** | `rgba(255, 255, 255, 0.7)` | `rgba(10, 10, 10, 0.7)` |
+| **Primary** | **Ink** | `#171717` | `#ededed` |
+| **Secondary** | **Graphite** | `#525252` | `#a3a3a3` |
+| **Accent** | **Indigo** | `#6366f1` | `#818cf8` |
 
-## 6. Layout & Grid
-- **Container:** Max-width of `1280px` centered.
-- **Grid:** 12-column grid for desktop, 4-column for mobile.
-- **Spacing:** Using Tailwind's spacing scale (`p-4`, `m-8`, `gap-6`) for consistency.
-- **Responsiveness:**
-  - **Mobile:** Single column, stacked layout.
-  - **Tablet:** Two-column layout for project cards.
-  - **Desktop:** Multi-column layouts with generous whitespace.
+### Gradients
+- **Subtle Glow:** `bg-gradient-to-tr from-indigo-500/10 via-purple-500/5 to-transparent` (Background accents)
+- **Text Gradient:** `bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600` (Dark mode: `from-white to-gray-400`)
+- **Card Hover:** `hover:bg-gradient-to-br hover:from-white/5 hover:to-white/0` (Glassmorphism)
 
-## 7. Component Library
-### Navigation
-- Sticky top navbar.
-- Logo (Text: "Renee Martinez") on the left.
-- Links (About, Experience, Work, Contact) on the right.
+## 5. Spacing & Layout
+- **Container:** `max-w-6xl` centered.
+- **Section Spacing:** `py-24` or `py-32` to allow breathing room.
+- **Grid:** 12-column grid system, but often using flexbox for fluid layouts.
+- **Gap:** Generous gaps (`gap-8` to `gap-16`).
 
-### Hero Section
-- Large, bold introduction.
-- clear CTA ("View Work" or "Download Resume").
-- Placeholder for headshot.
+## 6. Animations & Micro-interactions
+Using `framer-motion` for fluid, spring-based animations.
+
+- **Entrance:** Elements stagger in with a subtle slide-up (`y: 20 -> 0`) and fade-in (`opacity: 0 -> 1`).
+- **Hover:**
+  - **Buttons:** Slight scale up (`1.02`), shadow bloom.
+  - **Cards:** Lift (`y: -4px`), subtle border glow.
+- **Scroll:** Smooth parallax or reveal on scroll.
+- **Transition:** Page transitions should be instant but smooth (no jarring layout shifts).
+
+## 7. Component Guidelines
+
+### Navbar
+- **Style:** Floating glassmorphism (blur-md).
+- **Behavior:** Hides on scroll down, reveals on scroll up (optional) or stays sticky with high transparency.
+
+### Buttons
+- **Primary:** Solid background, rounded-full, subtle shadow.
+- **Secondary:** Outline or ghost, text-only with underline animation.
 
 ### Project Cards
-- Clean card with thumbnail image.
-- Project Title & Type (e.g., "Web App Redesign").
-- Short description.
-- "View Case Study" link.
+- **Structure:** Large thumbnail, clean typography below.
+- **Interaction:** Entire card clickable. Image scales slightly on hover.
 
-### Footer
-- Simple copyright.
-- Social links (LinkedIn, Behance, Email).
-
-## 8. Accessibility (WCAG)
-- **Contrast:** Ensure all text meets AA standards (4.5:1 ratio).
-- **Semantic HTML:** Use proper `<header>`, `<main>`, `<section>`, `<article>`, `<footer>` tags.
-- **Keyboard Navigation:** Ensure all interactive elements are focusable.
-- **Alt Text:** All images must have descriptive alt text.
-
-## 9. User Flow
-1. **Landing:** User arrives, sees the Value Prop (Hero).
-2. **Scan:** User scrolls to see Skills and Experience summary.
-3. **Deep Dive:** User clicks on a Project to view details (Behance).
-4. **Action:** User downloads Resume or clicks Contact.
+## 8. Accessibility
+- **Contrast:** Maintain AA standards.
+- **Motion:** Respect `prefers-reduced-motion`.
+- **Focus:** Visible focus rings for keyboard users.

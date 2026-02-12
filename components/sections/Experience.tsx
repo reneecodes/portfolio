@@ -4,53 +4,84 @@ export default function Experience() {
       company: 'OddsCharts',
       role: 'Lead UI/UX Designer',
       period: 'Jan 2024 - Present',
-      location: 'Remote, California',
-      description: 'Led the end-to-end redesign of a data-heavy platform for sports bettors. Transformed the product from a mid-fidelity concept to a polished, responsive web application.',
+      location: 'Remote',
+      description: 'Spearheaded the complete redesign of a complex sports betting platform. Transformed high-density data tables into an intuitive, responsive dashboard, significantly reducing cognitive load for users.',
+      tags: ['Product Design', 'Design Systems']
     },
     {
       company: 'Data Annotation',
       role: 'AI Trainer & Content Evaluator',
       period: 'Oct 2023 - Oct 2024',
-      location: 'Remote, California',
-      description: 'Taught Large Language Models (LLMs) to communicate more naturally and accurately by evaluating the nuance of human intent.',
+      location: 'Remote',
+      description: 'Collaborated on RLHF (Reinforcement Learning from Human Feedback) initiatives to improve LLM reasoning and natural language generation capabilities.',
+      tags: ['AI/ML', 'Data Quality']
     },
     {
       company: 'Amazon Mechanical Turk',
       role: 'Research Contributor',
       period: 'June 2022 - Jan 2023',
-      location: 'Remote, California',
-      description: 'Contributed to various research tasks and data collection initiatives.',
+      location: 'Remote',
+      description: 'Participated in large-scale data collection and user behavior research studies.',
+      tags: ['Research', 'Data Collection']
     },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center mb-16">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Career</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+    <section id="experience" className="py-24 md:py-32 bg-white dark:bg-black relative overflow-hidden">
+      {/* Subtle Background Blob */}
+      <div className="absolute right-0 top-1/4 w-96 h-96 bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 relative">
+        <div className="mb-16">
+          <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm">Career</span>
+          <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
             Experience
-          </p>
+          </h2>
         </div>
 
-        <div className="relative border-l border-gray-200 dark:border-gray-700 ml-3 md:ml-6 space-y-12">
+        <div className="space-y-16">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-10 ml-6 md:ml-10 relative">
-              <span className="flex absolute -left-[35px] md:-left-[52px] justify-center items-center w-8 h-8 md:w-10 md:h-10 bg-indigo-100 rounded-full ring-8 ring-white dark:ring-black dark:bg-indigo-900">
-                <span className="text-indigo-600 dark:text-indigo-400 text-lg">•</span>
-              </span>
-              <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                {exp.role} 
-                <span className="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 ml-3">
-                  {exp.company}
-                </span>
-              </h3>
-              <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                {exp.period} | {exp.location}
-              </time>
-              <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                {exp.description}
-              </p>
+            <div key={index} className="relative group animate-fade-in-up delay-100">
+              {/* Timeline Line */}
+              {index !== experiences.length - 1 && (
+                <div className="absolute left-[11px] top-10 bottom-[-64px] w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-900 transition-colors duration-500" />
+              )}
+              
+              <div className="flex gap-8">
+                {/* Timeline Dot */}
+                <div className="flex-shrink-0 mt-1.5 relative">
+                  <div className="w-6 h-6 rounded-full border-4 border-white dark:border-black bg-indigo-100 dark:bg-indigo-900 z-10 relative shadow-sm group-hover:scale-125 transition-transform duration-300">
+                    <div className="absolute inset-0 m-auto w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                      {exp.role}
+                    </h3>
+                    <span className="text-sm font-medium text-gray-500 dark:text-gray-400 font-mono mt-1 sm:mt-0">
+                      {exp.period}
+                    </span>
+                  </div>
+                  
+                  <div className="text-base font-medium text-gray-700 dark:text-gray-300 mb-4">
+                    {exp.company}
+                  </div>
+                  
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 max-w-2xl">
+                    {exp.description}
+                  </p>
+
+                  <div className="flex gap-2">
+                    {exp.tags.map(tag => (
+                      <span key={tag} className="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
