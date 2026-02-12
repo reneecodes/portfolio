@@ -1,14 +1,26 @@
 import Link from 'next/link';
+import Image from 'next/image';
+
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+  gradient: string;
+  icon: string;
+  image?: string;
+}
 
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'OddsCharts Redesign',
       description: 'Led the end-to-end redesign of a data-heavy sports betting platform, improving usability and visual hierarchy.',
       tags: ['UI/UX', 'Web App', 'Data Viz'],
       link: 'https://www.behance.net/reneemartinez6',
       gradient: 'from-blue-500/20 to-cyan-500/20',
-      icon: '📊'
+      icon: '📊',
+      image: '/images/oddscharts-cover.png'
     },
     {
       title: 'Recipe Page',
@@ -52,8 +64,21 @@ export default function Projects() {
                 className="block h-full"
                 aria-label={`View case study for ${project.title}`}
               >
-              <div className={`h-64 w-full bg-gradient-to-br ${project.gradient} flex items-center justify-center group-hover:scale-105 transition-transform duration-700`}>
-                <span className="text-6xl filter drop-shadow-lg transform group-hover:scale-110 transition-transform duration-500">{project.icon}</span>
+              <div className={`h-64 w-full relative overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-700`}>
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`Screenshot of ${project.title}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`} />
+                    <span className="relative text-6xl filter drop-shadow-lg transform group-hover:scale-110 transition-transform duration-500">{project.icon}</span>
+                  </>
+                )}
               </div>
               
               <div className="p-8">
