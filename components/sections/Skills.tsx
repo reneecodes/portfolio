@@ -15,7 +15,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 md:py-32 bg-gray-50 dark:bg-gray-900/50 relative">
+    <section id="skills" className="py-24 md:py-32 relative">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="mb-16">
            <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm">Expertise</span>

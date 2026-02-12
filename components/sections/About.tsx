@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-gray-50 dark:bg-gray-900/50">
+    <section id="about" className="py-24 md:py-32">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center">
         <div className="animate-fade-in-up">
           <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm">About Me</span>

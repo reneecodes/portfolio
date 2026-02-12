@@ -27,7 +27,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 md:py-32 bg-white dark:bg-black relative overflow-hidden">
+    <section id="experience" className="py-24 md:py-32 relative overflow-hidden">
       {/* Subtle Background Blob */}
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
 

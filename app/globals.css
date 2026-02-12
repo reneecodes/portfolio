@@ -53,21 +53,28 @@
 .delay-500 { animation-delay: 500ms; }
 
 /* Global Base Styles */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Light Mode: Subtle, crisp gradient from very light cool gray to white */
+  --bg-gradient: radial-gradient(ellipse at 50% 0%, #f8fafc 0%, #ffffff 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    /* Dark Mode: Deep, rich gradient from midnight indigo to pure black */
+    --bg-gradient: radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #020617 100%);
   }
+}
+
+body {
+  background-color: var(--background);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed; /* Ensures gradient stays beautiful on scroll */
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
