@@ -27,14 +27,19 @@ export default function Navbar() {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
         scrolled 
-          ? 'glass py-3' 
+          ? 'bg-[#0a0a0a] border-b border-white/10 py-3 shadow-lg' 
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold tracking-tight text-gray-900 dark:text-white group">
+            <Link 
+              href="/" 
+              className={`text-xl font-bold tracking-tight transition-colors group ${
+                scrolled ? 'text-white' : 'text-gray-900 dark:text-white'
+              }`}
+            >
               Renee Martinez
               <span className="text-indigo-600 dark:text-indigo-400 group-hover:text-purple-600 transition-colors">.</span>
             </Link>
@@ -46,7 +51,11 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors relative group"
+                className={`text-sm font-medium transition-colors relative group ${
+                  scrolled 
+                    ? 'text-gray-300 hover:text-[#F8F8F8]' 
+                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-[#F8F8F8]'
+                }`}
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300 group-hover:w-full" />
@@ -58,7 +67,11 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none p-2"
+              className={`focus:outline-none p-2 transition-colors ${
+                scrolled 
+                  ? 'text-gray-300 hover:text-white' 
+                  : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+              }`}
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center gap-1.5">
@@ -73,7 +86,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white/95 dark:bg-gray-950/95 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800 transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a] border-b border-white/10 transition-all duration-300 overflow-hidden ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -82,7 +95,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-indigo-400 dark:hover:bg-gray-900/50 transition-colors"
+              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-[#F8F8F8] hover:bg-white/5 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
