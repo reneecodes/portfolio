@@ -1,13 +1,20 @@
-# Renee Martinez - UX Designer Portfolio
+# Renee Martinez - Lead UI/UX Designer Portfolio ✨
 
-## ✨ Overview
-Renee Martinez is a Lead UI/UX Designer specializing in turning "information overload" into intuitive digital experiences. She believes that the best designs are the ones that feel like they aren't even there. This portfolio showcases her expertise in creating polished, responsive products for data-heavy platforms and her work in AI training.
+## 🎨 The Vision
+Renee Martinez is a Lead UI/UX Designer specializing in turning "information overload" into intuitive, beautiful digital experiences. She believes that the best designs are the ones that feel like they aren't even there. 
+
+This portfolio has been completely revamped to reflect a **Senior Designer's aesthetic**, featuring:
+- **Sophisticated Glassmorphism:** High-end transparency and blur effects.
+- **Unified Canvas Background:** A sleek radial gradient that stays fixed as you scroll.
+- **Fluid CSS Animations:** Staggered entrance effects and smooth micro-interactions.
+- **Modern Typography:** Optimized for legibility and visual hierarchy.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v18 or later recommended)
-- npm or yarn
+- **Node.js:** v18 or later (v20+ recommended)
+- **Framework:** Next.js 15+ (App Router)
+- **Styling:** Tailwind CSS v4
 
 ### Installation
 1. Clone the repository:
@@ -28,7 +35,7 @@ To start the development server:
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the magic! ✨
 
 ### Build & Deploy
 To build the application for production:

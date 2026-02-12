@@ -22,7 +22,7 @@ Using **Geist Sans** (Next.js default) for a clean, highly legible interface.
 - **Small/Meta:** `text-sm`, `font-medium`, `uppercase`, `tracking-wider`.
 
 ## 4. Color Palette & Gradients
-A refined palette moving beyond flat colors to subtle depth.
+A refined palette moving beyond flat colors to subtle depth, using a unified canvas approach.
 
 ### Core Colors
 | Role | Color Name | Hex Code (Light) | Hex Code (Dark) |
@@ -33,26 +33,31 @@ A refined palette moving beyond flat colors to subtle depth.
 | **Secondary** | **Graphite** | `#525252` | `#a3a3a3` |
 | **Accent** | **Indigo** | `#6366f1` | `#818cf8` |
 
-### Gradients
-- **Subtle Glow:** `bg-gradient-to-tr from-indigo-500/10 via-purple-500/5 to-transparent` (Background accents)
+### Global Background Gradient
+The site uses a fixed radial gradient on the `body` to create a sophisticated "spotlight" effect that remains consistent as the user scrolls.
+
+- **Light Mode:** `radial-gradient(ellipse at 50% 0%, #f8fafc 0%, #ffffff 100%)`
+- **Dark Mode:** `radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #020617 100%)`
+
+### Accent Gradients & Effects
 - **Text Gradient:** `bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600` (Dark mode: `from-white to-gray-400`)
-- **Card Hover:** `hover:bg-gradient-to-br hover:from-white/5 hover:to-white/0` (Glassmorphism)
+- **Glassmorphism:** `.glass` utility with `backdrop-filter: blur(12px)` and a subtle 1px border.
 
 ## 5. Spacing & Layout
 - **Container:** `max-w-6xl` centered.
 - **Section Spacing:** `py-24` or `py-32` to allow breathing room.
-- **Grid:** 12-column grid system, but often using flexbox for fluid layouts.
+- **Unified Canvas:** No section-specific background colors; the global gradient serves as the backdrop for the entire experience.
 - **Gap:** Generous gaps (`gap-8` to `gap-16`).
 
 ## 6. Animations & Micro-interactions
-Using `framer-motion` for fluid, spring-based animations.
+Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-performance, dependency-free experience.
 
-- **Entrance:** Elements stagger in with a subtle slide-up (`y: 20 -> 0`) and fade-in (`opacity: 0 -> 1`).
+- **Entrance:** Elements use `animate-fade-in-up` with staggered `animation-delay` (100ms increments).
+- **Scale-In:** Used for cards and visual elements to provide a sense of depth (`animate-scale-in`).
 - **Hover:**
-  - **Buttons:** Slight scale up (`1.02`), shadow bloom.
-  - **Cards:** Lift (`y: -4px`), subtle border glow.
-- **Scroll:** Smooth parallax or reveal on scroll.
-- **Transition:** Page transitions should be instant but smooth (no jarring layout shifts).
+  - **Buttons:** Smooth transitions, subtle scale shifts.
+  - **Cards:** Lift effects and subtle border glow.
+- **Performance:** All animations are hardware-accelerated and respect `prefers-reduced-motion`.
 
 ## 7. Component Guidelines
 
