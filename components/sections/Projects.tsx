@@ -51,14 +51,18 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {projects.map((project, index) => (
-            <Link 
-              href={project.link} 
+            <article 
               key={index}
-              target="_blank"
-              rel="noopener noreferrer"
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
-              className={`group block rounded-3xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800 hover:border-indigo-100 dark:hover:border-indigo-900/30 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 animate-fade-in-up`}
+              className={`group relative block rounded-3xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800 hover:border-indigo-100 dark:hover:border-indigo-900/30 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 animate-fade-in-up`}
             >
+              <Link 
+                href={project.link} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+                aria-label={`View case study for ${project.title}`}
+              >
               <div className={`h-64 w-full bg-gradient-to-br ${project.gradient} flex items-center justify-center group-hover:scale-105 transition-transform duration-700`}>
                 <span className="text-6xl filter drop-shadow-lg transform group-hover:scale-110 transition-transform duration-500">{project.icon}</span>
               </div>
@@ -87,7 +91,8 @@ export default function Projects() {
                   </svg>
                 </div>
               </div>
-            </Link>
+              </Link>
+            </article>
           ))}
         </div>
         

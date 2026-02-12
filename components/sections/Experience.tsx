@@ -41,7 +41,7 @@ export default function Experience() {
 
         <div className="space-y-16">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative group animate-fade-in-up delay-100">
+            <article key={index} className="relative group animate-fade-in-up delay-100">
               {/* Timeline Line */}
               {index !== experiences.length - 1 && (
                 <div className="absolute left-[11px] top-10 bottom-[-64px] w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-900 transition-colors duration-500" />
@@ -82,7 +82,7 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

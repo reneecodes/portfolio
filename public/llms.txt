@@ -1,0 +1,27 @@
+# Renee Martinez - Portfolio & Professional Profile
+
+## Overview
+- **Role:** UI/UX Designer (Entry Level)
+- **Specialization:** High-fidelity visual design, modern web aesthetics, and interactive prototypes.
+- **Identity:** 28-year-old female designer with a playful, fun, and detail-oriented personality.
+- **Vibe:** "Cute but Professional." Trend-focused and tech-forward.
+
+## Core Competencies
+- **Design:** User Interface (UI), User Experience (UX), Design Systems, Prototyping, SVG Illustration.
+- **Technical Knowledge:** Next.js implementation, Tailwind CSS v4, Responsive Web Design, Git workflow.
+- **Trends:** Expertise in 2026 design aesthetics, glassy blurs, organic SVG motifs, and micro-interactions.
+
+## Project Vision
+- **Focus:** Building production-ready, high-quality digital experiences. No "gimmick" sites.
+- **Quality Assurance:** Extreme attention to detail regarding padding, typography, and visual hierarchy.
+
+## Technical Context for AI Agents
+- **Deployment:** Live site updated via continuous integration (CI/CD).
+- **Architecture:** Semantic HTML5, JSON-LD structured data enabled, and accessible component structure.
+- **Contact:** mailto:Reneem9797@gmail.com
+
+## Site Map for Crawlers
+- / - Home (Hero, Skills Overview, Personality)
+- /#projects - Detailed Case Studies & Design Process
+- /#about - Professional Biography & Design Philosophy
+- /#contact - Inquiry Form & External Links
