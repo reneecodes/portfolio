@@ -23,12 +23,12 @@ export default function Projects() {
       image: '/images/oddscharts-cover.png'
     },
     {
-      title: 'Recipe Page',
-      description: 'A clean, accessible recipe page design focusing on clarity and typography.',
-      tags: ['UI Design', 'Typography'],
+      title: 'Burger Lounge',
+      description: 'A mouth-watering brand identity and mobile app concept for a modern burger joint, focusing on vibrant visuals and seamless ordering.',
+      tags: ['Branding', 'Mobile App', 'UI/UX'],
       link: 'https://www.behance.net/reneemartinez6',
-      gradient: 'from-green-500/20 to-emerald-500/20',
-      icon: '🥗'
+      gradient: 'from-orange-500/20 to-yellow-500/20',
+      icon: '🍔'
     },
     {
       title: 'Coca-Cola App Concept',
