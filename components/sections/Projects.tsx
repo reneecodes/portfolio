@@ -22,21 +22,21 @@ export default function Projects() {
       icon: '📊',
       image: '/images/oddscharts-cover.png'
     },
-    {
-      title: 'Coca-Cola Responsive Website',
-      description: 'A school project focusing on a responsive mobile application for Coca-Cola. It features a seamless user experience for flavor discovery, a loyalty rewards program, and interactive customization options, mirroring the functionality of a modern fast-food mobile ordering system.',
-      tags: ['UI/UX', 'Mobile App', 'Loyalty'],
-      link: 'https://www.behance.net/gallery/230850547/Coca-Cola-Responsive-Application-(school-project)',
-      gradient: 'from-red-600/20 to-red-400/20',
-      icon: '�'
-    },
+   
     {
       title: 'Burger Lounge',
       description: 'An intuitive mobile ordering experience for a premium burger brand. Features include a customizable menu, seamless checkout flow, and a dedicated loyalty rewards system.',
       tags: ['Product Design', 'Mobile App'],
       link: 'https://www.behance.net/reneemartinez6',
       gradient: 'from-orange-500/20 to-yellow-500/20',
-      icon: '🍔'
+      icon: '🍔', image: '/images/wholesome-bite.jpg'
+    }, {
+      title: 'Coca-Cola Responsive Website',
+      description: 'A school project focusing on a responsive mobile application for Coca-Cola. It features a seamless user experience for flavor discovery, a loyalty rewards program, and interactive customization options, mirroring the functionality of a modern fast-food mobile ordering system.',
+      tags: ['UI/UX', 'Mobile App', 'Loyalty'],
+      link: 'https://www.behance.net/gallery/230850547/Coca-Cola-Responsive-Application-(school-project)',
+      gradient: 'from-red-600/20 to-red-400/20',
+      icon: '�', image: '/images/coca-cola-coverpage.jpg'
     },
   ];
 
