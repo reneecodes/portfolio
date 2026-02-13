@@ -23,11 +23,11 @@ export default function Projects() {
       image: '/images/oddscharts-cover.png'
     },
     {
-      title: 'Burger Lounge',
-      description: 'A mouth-watering brand identity and mobile app concept for a modern burger joint, focusing on vibrant visuals and seamless ordering.',
-      tags: ['Branding', 'Mobile App', 'UI/UX'],
-      link: 'https://www.behance.net/reneemartinez6',
-      gradient: 'from-orange-500/20 to-yellow-500/20',
+      title: 'School Project (Fast Food Mobile application)',
+      description: 'A health-focused fast food mobile application featuring seamless ordering, nutritional transparency, and real-time tracking.',
+      tags: ['Mobile App', 'UI/UX', 'Case Study'],
+      link: 'https://www.behance.net/gallery/230079133/School-Project-(Fast-Food-Mobile-application)',
+      gradient: 'from-orange-500/20 to-red-500/20',
       icon: '🍔'
     },
     {
