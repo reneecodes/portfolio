@@ -5,6 +5,36 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
+  /* 🎨 Digital Pop Color Palette - Vibrant, Fun, Modern */
+  /* Primary Colors */
+  --color-primary-500: #8B5CF6; /* Electric Violet */
+  --color-primary-600: #7C3AED; /* Electric Violet - Darker */
+  --color-primary-400: #A78BFA; /* Electric Violet - Lighter */
+  
+  --color-secondary-500: #F97316; /* Coral Burst */
+  --color-secondary-600: #EA580C; /* Coral Burst - Darker */
+  --color-secondary-400: #FB923C; /* Coral Burst - Lighter */
+
+  /* Accent Colors */
+  --color-accent-500: #34D399; /* Neon Mint */
+  --color-accent-600: #10B981; /* Neon Mint - Darker */
+  --color-accent-400: #6EE7B7; /* Neon Mint - Lighter */
+  
+  --color-sunshine-500: #FBBF24; /* Sunshine Yellow */
+  --color-sunshine-600: #F59E0B; /* Sunshine Yellow - Darker */
+  --color-sunshine-400: #FCD34D; /* Sunshine Yellow - Lighter */
+  
+  --color-electric-500: #3B82F6; /* Electric Blue */
+  --color-electric-600: #2563EB; /* Electric Blue - Darker */
+  --color-electric-400: #60A5FA; /* Electric Blue - Lighter */
+
+  /* Neutral Colors */
+  --color-canvas: #F9FAFB; /* Canvas White */
+  --color-ink: #111827; /* Charcoal Ink */
+  --color-graphite: #6B7280; /* Soft Graphite */
+  --color-glass: #F3F4F6; /* Light Glass */
+  --color-surface: #E5E7EB; /* Surface Gray */
+
   /* Animations */
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
   --animate-fade-in: fade-in 1s ease-out forwards;
@@ -54,18 +84,18 @@
 
 /* Global Base Styles */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  /* Light Mode: Subtle, crisp gradient from very light cool gray to white */
-  --bg-gradient: radial-gradient(ellipse at 50% 0%, #f8fafc 0%, #ffffff 100%);
+  --background: var(--color-canvas);
+  --foreground: var(--color-ink);
+  /* Light Mode: Vibrant, playful gradient from soft purple to bright mint */
+  --bg-gradient: radial-gradient(ellipse at 50% 0%, var(--color-primary-400) 0%, var(--color-accent-400) 50%, var(--color-canvas) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    /* Dark Mode: Deep, rich gradient from midnight indigo to pure black */
-    --bg-gradient: radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #020617 100%);
+    --background: var(--color-ink);
+    --foreground: var(--color-canvas);
+    /* Dark Mode: Deep, vibrant gradient from rich violet to deep teal */
+    --bg-gradient: radial-gradient(ellipse at 50% 0%, var(--color-primary-600) 0%, var(--color-accent-600) 50%, var(--color-ink) 100%);
   }
 }
 
