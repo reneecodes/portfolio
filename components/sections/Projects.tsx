@@ -37,7 +37,8 @@ export default function Projects() {
       tags: ['Mobile App', 'Branding'],
       link: 'https://www.behance.net/reneemartinez6',
       gradient: 'from-red-500/20 to-orange-500/20',
-      icon: '📱'
+      icon: '📱',
+      image: '/images/coca-cola-coverpage.jpg'
     },
   ];
 
