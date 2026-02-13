@@ -41,7 +41,7 @@ export default function Navbar() {
               }`}
             >
               Renee Martinez
-              <span className="text-indigo-600 dark:text-indigo-400 group-hover:text-purple-600 transition-colors">.</span>
+              <span className="text-coral-600 dark:text-coral-400 group-hover:text-lavender-600 transition-colors">.</span>
             </Link>
           </div>
           
@@ -53,12 +53,12 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors relative group ${
                   scrolled 
-                    ? 'text-gray-300 hover:text-[#F8F8F8]' 
-                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-[#F8F8F8]'
+                    ? 'text-warmgray-300 hover:text-[#F8F8F8]' 
+                    : 'text-warmgray-600 hover:text-warmgray-900 dark:text-warmgray-300 dark:hover:text-[#F8F8F8]'
                 }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral-600 dark:bg-coral-400 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
@@ -69,8 +69,8 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className={`focus:outline-none p-2 transition-colors ${
                 scrolled 
-                  ? 'text-gray-300 hover:text-white' 
-                  : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                  ? 'text-warmgray-300 hover:text-white' 
+                  : 'text-warmgray-700 dark:text-warmgray-300 hover:text-warmgray-900 dark:hover:text-white'
               }`}
               aria-label="Toggle menu"
             >
@@ -95,7 +95,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-[#F8F8F8] hover:bg-white/5 transition-colors"
+              className="block px-4 py-3 rounded-lg text-base font-medium text-warmgray-300 hover:text-[#F8F8F8] hover:bg-white/5 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.name}

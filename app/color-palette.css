@@ -1,13 +1,6 @@
-@import "tailwindcss";
-@import "./color-palette.css";
+/* ✨ Renee's Fresh Modern Color Palette - 2025 Edition */
 
 @theme {
-  /* Typography overrides if needed, but standard sans/mono is fine */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* ✨ Renee's Fresh Modern Color Palette - 2025 Edition */
-  
   /* 🎨 Primary Palette - Fun, Modern, Professional */
   
   /* Coral Rose - Primary Accent (Warm, Inviting, Creative) */
@@ -107,62 +100,9 @@
   --color-rose-700: #be123c;
   --color-rose-800: #9f1239;
   --color-rose-900: #881337;
-
-  /* Animations */
-  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
-  --animate-fade-in: fade-in 1s ease-out forwards;
-  --animate-scale-in: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes scale-in {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
 }
 
-/* Custom Utilities */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.dark .glass {
-  background: rgba(10, 10, 10, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* ✨ Modern Glassmorphism with New Colors */
-.glass-modern {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.dark .glass-modern {
-  background: rgba(10, 10, 10, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* 🎨 Gradient Utilities - Modern & Sophisticated */
+/* 🎯 Gradient Implementations - Modern & Sophisticated */
 
 /* Primary Hero Gradient - Coral to Lavender (Fun & Professional) */
 .gradient-hero {
@@ -209,7 +149,21 @@
   }
 }
 
-/* ✨ Text Gradient Effects */
+/* ✨ Glassmorphism Updates with New Colors */
+.glass-modern {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-modern {
+  background: rgba(10, 10, 10, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 🎨 Text Gradient Effects */
 .text-gradient-primary {
   background: linear-gradient(135deg, 
     var(--color-coral-600) 0%, 
@@ -226,38 +180,4 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* Stagger Utilities */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-
-/* Global Base Styles */
-:root {
-  --background: #ffffff;
-  --foreground: var(--color-warmgray-800);
-  /* Light Mode: Fresh modern gradient with Coral and Sage */
-  --bg-gradient: radial-gradient(ellipse at 50% 0%, var(--color-cream-50) 0%, var(--color-sage-50) 100%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--color-warmgray-900);
-    --foreground: var(--color-warmgray-100);
-    /* Dark Mode: Sophisticated gradient with Lavender and Warm Gray */
-    --bg-gradient: radial-gradient(ellipse at 50% 0%, var(--color-lavender-900) 0%, var(--color-warmgray-900) 100%);
-  }
-}
-
-body {
-  background-color: var(--background);
-  background-image: var(--bg-gradient);
-  background-attachment: fixed; /* Ensures gradient stays beautiful on scroll */
-  color: var(--foreground);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
 }
