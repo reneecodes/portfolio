@@ -28,7 +28,8 @@ export default function Projects() {
       tags: ['Mobile App', 'UI/UX', 'Case Study'],
       link: 'https://www.behance.net/gallery/230079133/School-Project-(Fast-Food-Mobile-application)',
       gradient: 'from-orange-500/20 to-red-500/20',
-      icon: '🍔'
+      icon: '🍔',
+      image: '/images/wholesome-bite.jpg'
     },
     {
       title: 'Coca-Cola App Concept',
