@@ -2,111 +2,9 @@
 @import "./color-palette.css";
 
 @theme {
-  /* Typography overrides if needed, but standard sans/mono is fine */
+  /* Typography overrides */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
-  /* ✨ Renee's Fresh Modern Color Palette - 2025 Edition */
-  
-  /* 🎨 Primary Palette - Fun, Modern, Professional */
-  
-  /* Coral Rose - Primary Accent (Warm, Inviting, Creative) */
-  --color-coral-50: #fef7f5;
-  --color-coral-100: #feede8;
-  --color-coral-200: #fddad0;
-  --color-coral-300: #fbb8a6;
-  --color-coral-400: #f8927a;
-  --color-coral-500: #f56a4a; /* Main Coral */
-  --color-coral-600: #e15a3d;
-  --color-coral-700: #bc4a33;
-  --color-coral-800: #99402e;
-  --color-coral-900: #7d3729;
-  
-  /* Sage Green - Secondary (Calm, Professional, Balanced) */
-  --color-sage-50: #f6f8f6;
-  --color-sage-100: #e8f0e8;
-  --color-sage-200: #d1e1d1;
-  --color-sage-300: #a8c8a8;
-  --color-sage-400: #7ba87b;
-  --color-sage-500: #5a8a5a; /* Main Sage */
-  --color-sage-600: #4a7a4a;
-  --color-sage-700: #3d653d;
-  --color-sage-800: #355335;
-  --color-sage-900: #2e452e;
-  
-  /* Lavender - Tertiary (Creative, Modern, Sophisticated) */
-  --color-lavender-50: #faf8fe;
-  --color-lavender-100: #f3eefd;
-  --color-lavender-200: #e8ddf9;
-  --color-lavender-300: #d5c2f3;
-  --color-lavender-400: #b89eea;
-  --color-lavender-500: #9b7de0; /* Main Lavender */
-  --color-lavender-600: #8a6bd1;
-  --color-lavender-700: #7358b8;
-  --color-lavender-800: #5f4a96;
-  --color-lavender-900: #4f3e7a;
-  
-  /* Warm Gray - Neutral Base (Professional, Clean) */
-  --color-warmgray-50: #fafaf9;
-  --color-warmgray-100: #f5f5f4;
-  --color-warmgray-200: #e7e5e4;
-  --color-warmgray-300: #d6d3d1;
-  --color-warmgray-400: #a8a29e;
-  --color-warmgray-500: #78716c; /* Main Warm Gray */
-  --color-warmgray-600: #57534e;
-  --color-warmgray-700: #44403c;
-  --color-warmgray-800: #292524;
-  --color-warmgray-900: #1c1917;
-  
-  /* Cream - Light Background (Soft, Inviting) */
-  --color-cream-50: #fefcf8;
-  --color-cream-100: #fdf8f0;
-  --color-cream-200: #faf0e1;
-  --color-cream-300: #f5e4c8;
-  --color-cream-400: #edd4a3;
-  --color-cream-500: #e3c078; /* Main Cream */
-  --color-cream-600: #d1a85a;
-  --color-cream-700: #b08c4a;
-  --color-cream-800: #8f7240;
-  --color-cream-900: #755e38;
-
-  /* 🌈 Secondary Palette - Accents & Interactions */
-  
-  /* Sky Blue - Interactive Elements (Fresh, Trustworthy) */
-  --color-sky-50: #f0f9ff;
-  --color-sky-100: #e0f2fe;
-  --color-sky-200: #bae6fd;
-  --color-sky-300: #7dd3fc;
-  --color-sky-400: #38bdf8;
-  --color-sky-500: #0ea5e9; /* Main Sky */
-  --color-sky-600: #0284c7;
-  --color-sky-700: #0369a1;
-  --color-sky-800: #075985;
-  --color-sky-900: #0c4a6e;
-  
-  /* Sunset - Gradient Accents (Warm, Dynamic) */
-  --color-sunset-50: #fffbeb;
-  --color-sunset-100: #fef3c7;
-  --color-sunset-200: #fde68a;
-  --color-sunset-300: #fcd34d;
-  --color-sunset-400: #fbbf24;
-  --color-sunset-500: #f59e0b; /* Main Sunset */
-  --color-sunset-600: #d97706;
-  --color-sunset-700: #b45309;
-  --color-sunset-800: #92400e;
-  --color-sunset-900: #78350f;
-  
-  /* Rose - Soft Accents (Friendly, Approachable) */
-  --color-rose-50: #fff1f2;
-  --color-rose-100: #ffe4e6;
-  --color-rose-200: #fecdd3;
-  --color-rose-300: #fda4af;
-  --color-rose-400: #fb7185;
-  --color-rose-500: #f43f5e; /* Main Rose */
-  --color-rose-600: #e11d48;
-  --color-rose-700: #be123c;
-  --color-rose-800: #9f1239;
-  --color-rose-900: #881337;
 
   /* Animations */
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
@@ -135,6 +33,12 @@
   }
 }
 
+/* Custom Selection Style */
+::selection {
+  background-color: var(--color-primary-light);
+  color: #ffffff;
+}
+
 /* Custom Utilities */
 .glass {
   background: rgba(255, 255, 255, 0.7);
@@ -146,86 +50,6 @@
 .dark .glass {
   background: rgba(10, 10, 10, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* ✨ Modern Glassmorphism with New Colors */
-.glass-modern {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.dark .glass-modern {
-  background: rgba(10, 10, 10, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* 🎨 Gradient Utilities - Modern & Sophisticated */
-
-/* Primary Hero Gradient - Coral to Lavender (Fun & Professional) */
-.gradient-hero {
-  background: linear-gradient(135deg, 
-    var(--color-coral-500) 0%, 
-    var(--color-lavender-500) 50%, 
-    var(--color-sage-500) 100%);
-}
-
-/* Subtle Background Gradient - Warm & Inviting */
-.gradient-subtle {
-  background: linear-gradient(180deg, 
-    var(--color-cream-50) 0%, 
-    var(--color-warmgray-50) 100%);
-}
-
-/* Interactive Hover Gradient - Sky to Sage (Fresh & Dynamic) */
-.gradient-interactive {
-  background: linear-gradient(90deg, 
-    var(--color-sky-500) 0%, 
-    var(--color-sage-500) 100%);
-}
-
-/* Sunset Accent Gradient - Warm & Energetic */
-.gradient-accent {
-  background: linear-gradient(45deg, 
-    var(--color-sunset-400) 0%, 
-    var(--color-coral-400) 100%);
-}
-
-/* Dark Mode Gradients */
-@media (prefers-color-scheme: dark) {
-  .gradient-hero-dark {
-    background: linear-gradient(135deg, 
-      var(--color-coral-600) 0%, 
-      var(--color-lavender-600) 50%, 
-      var(--color-sage-600) 100%);
-  }
-  
-  .gradient-subtle-dark {
-    background: linear-gradient(180deg, 
-      var(--color-warmgray-900) 0%, 
-      var(--color-warmgray-800) 100%);
-  }
-}
-
-/* ✨ Text Gradient Effects */
-.text-gradient-primary {
-  background: linear-gradient(135deg, 
-    var(--color-coral-600) 0%, 
-    var(--color-lavender-600) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-secondary {
-  background: linear-gradient(90deg, 
-    var(--color-sage-600) 0%, 
-    var(--color-sky-600) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Stagger Utilities */

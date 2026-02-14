@@ -24,23 +24,22 @@ Using **Geist Sans** (Next.js default) for a clean, highly legible interface.
 ## 4. Color Palette & Gradients
 A refined palette moving beyond flat colors to subtle depth, using a unified canvas approach.
 
-### Core Colors
-| Role | Color Name | Hex Code (Light) | Hex Code (Dark) |
-|------|------------|------------------|-----------------|
-| **Background** | **Canvas** | `#ffffff` | `#0a0a0a` |
-| **Surface** | **Glass** | `rgba(255, 255, 255, 0.7)` | `rgba(10, 10, 10, 0.7)` |
-| **Primary** | **Ink** | `#171717` | `#ededed` |
-| **Secondary** | **Graphite** | `#525252` | `#a3a3a3` |
-| **Accent** | **Indigo** | `#6366f1` | `#818cf8` |
+### Core Colors (2025 Refreshed)
+| Role | Color Name | Tailwind Class | Hex Code |
+|------|------------|----------------|----------|
+| **Primary Accent** | **Coral Rose** | `text-coral-600` / `bg-coral-600` | `#e15a3d` |
+| **Secondary Accent** | **Sage Green** | `text-sage-600` / `bg-sage-600` | `#4a7a4a` |
+| **Tertiary Accent** | **Lavender** | `text-lavender-600` | `#8a6bd1` |
+| **Action/Buttons** | **Coral Dark** | `bg-coral-700` | `#bc4a33` (AA Compliant) |
 
 ### Global Background Gradient
 The site uses a fixed radial gradient on the `body` to create a sophisticated "spotlight" effect that remains consistent as the user scrolls.
 
-- **Light Mode:** `radial-gradient(ellipse at 50% 0%, #f8fafc 0%, #ffffff 100%)`
-- **Dark Mode:** `radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, #020617 100%)`
+- **Light Mode:** `radial-gradient(ellipse at 50% 0%, var(--color-coral-50) 0%, var(--color-sage-50) 100%)`
+- **Dark Mode:** `radial-gradient(ellipse at 50% 0%, var(--color-lavender-900) 0%, var(--color-warmgray-900) 100%)`
 
 ### Accent Gradients & Effects
-- **Text Gradient:** `bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600` (Dark mode: `from-white to-gray-400`)
+- **Text Gradient:** `bg-clip-text text-transparent bg-gradient-to-r from-coral-600 to-lavender-600`
 - **Glassmorphism:** `.glass` utility with `backdrop-filter: blur(12px)` and a subtle 1px border.
 
 ## 5. Spacing & Layout

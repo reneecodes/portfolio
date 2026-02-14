@@ -100,6 +100,19 @@
   --color-rose-700: #be123c;
   --color-rose-800: #9f1239;
   --color-rose-900: #881337;
+
+  /* 🎨 Semantic Aliases - Accessibility Optimized */
+  --color-primary: var(--color-coral-600); /* Brand Identity */
+  --color-primary-dark: var(--color-coral-700); /* Text & Accessible Bg */
+  --color-primary-light: var(--color-coral-400); /* Decorative */
+  
+  --color-secondary: var(--color-sage-600);
+  --color-secondary-dark: var(--color-sage-700);
+  --color-secondary-light: var(--color-sage-400);
+  
+  --color-accent: var(--color-lavender-600);
+  
+  /* Animations */
 }
 
 /* 🎯 Gradient Implementations - Modern & Sophisticated */

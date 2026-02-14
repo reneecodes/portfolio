@@ -41,7 +41,7 @@ export default function Navbar() {
               }`}
             >
               Renee Martinez
-              <span className="text-coral-600 dark:text-coral-400 group-hover:text-lavender-600 transition-colors">.</span>
+              <span className="text-primary dark:text-primary-light group-hover:text-accent transition-colors">.</span>
             </Link>
           </div>
           
@@ -58,7 +58,7 @@ export default function Navbar() {
                 }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral-600 dark:bg-coral-400 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary dark:bg-primary-light transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>

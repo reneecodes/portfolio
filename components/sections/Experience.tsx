@@ -29,11 +29,11 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 md:py-32 relative overflow-hidden">
       {/* Subtle Background Blob */}
-      <div className="absolute right-0 top-1/4 w-96 h-96 bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute right-0 top-1/4 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 sm:px-8 relative">
         <div className="mb-16">
-          <span className="text-indigo-600 dark:text-indigo-400 font-semibold tracking-wider uppercase text-sm">Career</span>
+          <span className="text-primary dark:text-primary-light font-semibold tracking-wider uppercase text-sm">Career</span>
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
             Experience
           </h2>
@@ -44,20 +44,20 @@ export default function Experience() {
             <article key={index} className="relative group animate-fade-in-up delay-100">
               {/* Timeline Line */}
               {index !== experiences.length - 1 && (
-                <div className="absolute left-[11px] top-10 bottom-[-64px] w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-900 transition-colors duration-500" />
+                <div className="absolute left-[11px] top-10 bottom-[-64px] w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-primary-light/30 dark:group-hover:bg-primary-dark/30 transition-colors duration-500" />
               )}
               
               <div className="flex gap-8">
                 {/* Timeline Dot */}
                 <div className="flex-shrink-0 mt-1.5 relative">
-                  <div className="w-6 h-6 rounded-full border-4 border-white dark:border-black bg-indigo-100 dark:bg-indigo-900 z-10 relative shadow-sm group-hover:scale-125 transition-transform duration-300">
-                    <div className="absolute inset-0 m-auto w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+                  <div className="w-6 h-6 rounded-full border-4 border-white dark:border-black bg-primary-light/20 dark:bg-primary-dark/40 z-10 relative shadow-sm group-hover:scale-125 transition-transform duration-300">
+                    <div className="absolute inset-0 m-auto w-2 h-2 rounded-full bg-primary dark:bg-primary-light" />
                   </div>
                 </div>
 
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
                       {exp.role}
                     </h3>
                     <span className="text-sm font-medium text-gray-500 dark:text-gray-400 font-mono mt-1 sm:mt-0">
