@@ -39,12 +39,8 @@ We follow the standard Next.js 16 **App Router** structure.
 - **Images:** Use `next/image` for optimization.
 
 ## 6. Key Components
-- `Navbar`: Responsive navigation with glassmorphism.
-- `Hero`: Introduction area with staggered animations.
-- `Skills`: Data-driven component showcasing expertise levels.
-  - **Structure:** Uses a `skillCategories` array for easy maintenance.
-  - **Styling:** Glassmorphism cards with dynamic border colors based on proficiency.
-  - **Animations:** Staggered `fade-in-up` effects for each category.
+- `Navbar`: Responsive navigation.
+- `Hero`: Introduction area.
 - `Section`: Wrapper component for consistent padding/margins.
 - `ProjectCard`: Reusable card for portfolio items.
 - `Button`: Standardized button styles.

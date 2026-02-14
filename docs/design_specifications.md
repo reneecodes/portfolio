@@ -82,21 +82,23 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 A dedicated section to showcase technical proficiencies with a focus on clarity and visual appeal.
 
 ### Structure
-- **Categorization:** Skills are grouped into logical categories (Design & Research, Frontend Development, Tools & Workflow).
-- **Cards:** Each skill is presented in a card with an icon, title, proficiency badge, and description.
+- **Categorization:** Skills are organized into three main cards: **Design & Research**, **Frontend Development**, and **Tools & Workflow**.
+- **Card Layout:** Each card features a bold header and is divided into logical subsections (e.g., "Languages", "Frameworks").
+- **List Style:** Skills are presented as bulleted lists.
 - **Grid Layout:** Responsive grid adapting from 1 column (mobile) to 3 columns (desktop).
 
 ### Visual Style
-- **Color Coding:** Each category is assigned a specific accent color from the palette:
+- **Color Coding:** Each category is assigned a specific accent color from the palette, applied to the top border and bullet points:
   - **Design & Research:** Coral (Creativity, Warmth)
   - **Frontend Development:** Sage (Growth, Balance)
   - **Tools & Workflow:** Lavender (Sophistication, Tech)
-- **Glassmorphism:** Cards use a light, semi-transparent background to maintain the "airy" feel.
+- **Typography:**
+  - **Headers:** Bold and prominent.
+  - **Subsections:** Uppercase, tracking-wider, with a subtle separator line.
 - **Micro-interactions:**
-  - **Hover:** Cards lift slightly (`-translate-y-1`) and the border color shifts to the category accent.
-  - **Entrance:** Staggered fade-in-up animation for a dynamic reveal.
+  - **Hover:** Cards lift slightly (`-translate-y-1`). Bullet points scale slightly on hover.
+  - **Entrance:** Staggered fade-in-up animation for the cards.
 
 ### Content Strategy
-- **Proficiency Levels:** Clearly labeled badges (Expert, Proficient, Intermediate, Familiar) to manage expectations.
-- **Contextual Descriptions:** Brief explanations of how each skill is applied, adding depth beyond a simple list.
-- **Iconography:** Custom SVG icons for each skill to ensure visual consistency and performance (no external icon libraries).
+- **Proficiency Display:** Proficiency badges (Expert, Proficient, Intermediate, Familiar) are right-aligned within each list item for quick scanning.
+- **Visual Hierarchy:** Highlighted format for badges ensures they stand out without cluttering the skill name.
