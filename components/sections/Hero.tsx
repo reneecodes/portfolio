@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -49,11 +50,15 @@ export default function Hero() {
           
           <div className="flex-1 flex justify-center md:justify-end animate-fade-in-up delay-300">
             <div className="relative w-64 h-64 md:w-[400px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
-              <div className="absolute inset-0 bg-gradient-to-tr from-coral-500/20 to-lavender-500/20 z-10" />
-              {/* Placeholder Image */}
-              <div className="w-full h-full bg-cream-50 dark:bg-warmgray-800 flex items-center justify-center relative">
-                <span className="text-8xl filter grayscale hover:grayscale-0 transition-all duration-500">👩🏻‍💻</span>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-coral-500/20 to-lavender-500/20 z-10 mix-blend-overlay pointer-events-none" />
+              <Image
+                src="/images/Profile-photo.jpg"
+                alt="Renee Martinez - Senior UX Designer"
+                fill
+                className="object-cover object-center"
+                priority
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
             </div>
           </div>
         </div>
