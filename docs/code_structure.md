@@ -42,5 +42,6 @@ We follow the standard Next.js 16 **App Router** structure.
 - `Navbar`: Responsive navigation.
 - `Hero`: Introduction area.
 - `Section`: Wrapper component for consistent padding/margins.
+- `Skills`: Detailed skills display with 3-card layout and proficiency badges.
 - `ProjectCard`: Reusable card for portfolio items.
 - `Button`: Standardized button styles.
