@@ -72,6 +72,11 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 - **Structure:** Large thumbnail, clean typography below.
 - **Interaction:** Entire card clickable. Image scales slightly on hover.
 
+### Skills Section (New)
+- **Cards:** Light glassmorphism (`bg-white/80`, `backdrop-blur-sm`) to maintain an airy feel.
+- **Visuals:** Animated background blobs (`coral`, `sage`) add depth.
+- **Interaction:** Cards lift and icons scale on hover; skills highlight with accent borders.
+
 ## 8. Accessibility
 - **Contrast:** Maintain AA standards.
 - **Motion:** Respect `prefers-reduced-motion`.
