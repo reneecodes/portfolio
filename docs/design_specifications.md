@@ -72,10 +72,11 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 - **Structure:** Large thumbnail, clean typography below.
 - **Interaction:** Entire card clickable. Image scales slightly on hover.
 
-### Skills Section (New)
-- **Cards:** Light glassmorphism (`bg-white/80`, `backdrop-blur-sm`) to maintain an airy feel.
-- **Visuals:** Animated background blobs (`coral`, `sage`) add depth.
-- **Interaction:** Cards lift and icons scale on hover; skills highlight with accent borders.
+### Skills & Tools Cards
+- **Style:** Glassmorphism (`bg-white/50` to `bg-white/80`) with soft border tints.
+- **Dark Mode:** Avoids pitch black; uses `bg-warmgray-900/60` for a softer, elevated look.
+- **Categorization:** Distinct icons and color coding (Coral for Design, Lavender for Frontend, Sage for Tools).
+- **Badges:** Pill-shaped, color-coded proficiency indicators.
 
 ## 8. Accessibility
 - **Contrast:** Maintain AA standards.
