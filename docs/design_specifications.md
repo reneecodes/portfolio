@@ -72,13 +72,31 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 - **Structure:** Large thumbnail, clean typography below.
 - **Interaction:** Entire card clickable. Image scales slightly on hover.
 
-### Skills & Tools Cards
-- **Style:** Glassmorphism (`bg-white/50` to `bg-white/80`) with soft border tints.
-- **Dark Mode:** Avoids pitch black; uses `bg-warmgray-900/60` for a softer, elevated look.
-- **Categorization:** Distinct icons and color coding (Coral for Design, Lavender for Frontend, Sage for Tools).
-- **Badges:** Pill-shaped, color-coded proficiency indicators.
-
 ## 8. Accessibility
 - **Contrast:** Maintain AA standards.
 - **Motion:** Respect `prefers-reduced-motion`.
 - **Focus:** Visible focus rings for keyboard users.
+- **Semantic HTML:** Use proper heading hierarchy and semantic tags (e.g., `<section>`, `<ul>`, `<li>`) for screen readers.
+
+## 9. Skills & Tools Section Design
+A dedicated section to showcase technical proficiencies with a focus on clarity and visual appeal.
+
+### Structure
+- **Categorization:** Skills are grouped into logical categories (Design & Research, Frontend Development, Tools & Workflow).
+- **Cards:** Each skill is presented in a card with an icon, title, proficiency badge, and description.
+- **Grid Layout:** Responsive grid adapting from 1 column (mobile) to 3 columns (desktop).
+
+### Visual Style
+- **Color Coding:** Each category is assigned a specific accent color from the palette:
+  - **Design & Research:** Coral (Creativity, Warmth)
+  - **Frontend Development:** Sage (Growth, Balance)
+  - **Tools & Workflow:** Lavender (Sophistication, Tech)
+- **Glassmorphism:** Cards use a light, semi-transparent background to maintain the "airy" feel.
+- **Micro-interactions:**
+  - **Hover:** Cards lift slightly (`-translate-y-1`) and the border color shifts to the category accent.
+  - **Entrance:** Staggered fade-in-up animation for a dynamic reveal.
+
+### Content Strategy
+- **Proficiency Levels:** Clearly labeled badges (Expert, Proficient, Intermediate, Familiar) to manage expectations.
+- **Contextual Descriptions:** Brief explanations of how each skill is applied, adding depth beyond a simple list.
+- **Iconography:** Custom SVG icons for each skill to ensure visual consistency and performance (no external icon libraries).
