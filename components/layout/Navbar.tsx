@@ -1,19 +1,10 @@
 "use client";
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -25,20 +16,14 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        scrolled 
-          ? 'bg-[#0a0a0a] border-b border-white/10 py-3 shadow-lg' 
-          : 'bg-transparent py-5'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out bg-transparent py-5 border-b border-white"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <Link 
               href="/" 
-              className={`text-xl font-bold tracking-tight transition-colors group ${
-                scrolled ? 'text-white' : 'text-gray-900 dark:text-white'
-              }`}
+              className="text-xl font-bold tracking-tight transition-colors group text-white"
             >
               Renee Martinez
               <span className="text-primary dark:text-primary-light group-hover:text-accent transition-colors">.</span>
@@ -51,11 +36,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors relative group ${
-                  scrolled 
-                    ? 'text-warmgray-300 hover:text-[#F8F8F8]' 
-                    : 'text-warmgray-600 hover:text-warmgray-900 dark:text-warmgray-300 dark:hover:text-[#F8F8F8]'
-                }`}
+                className="text-sm font-medium transition-colors relative group text-warmgray-300 hover:text-[#F8F8F8]"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary dark:bg-primary-light transition-all duration-300 group-hover:w-full" />
@@ -67,11 +48,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`focus:outline-none p-2 transition-colors ${
-                scrolled 
-                  ? 'text-warmgray-300 hover:text-white' 
-                  : 'text-warmgray-700 dark:text-warmgray-300 hover:text-warmgray-900 dark:hover:text-white'
-              }`}
+              className="focus:outline-none p-2 transition-colors text-warmgray-300 hover:text-white"
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center gap-1.5">

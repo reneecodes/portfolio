@@ -61,8 +61,8 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 ## 7. Component Guidelines
 
 ### Navbar
-- **Style:** Floating glassmorphism (blur-md).
-- **Behavior:** Hides on scroll down, reveals on scroll up (optional) or stays sticky with high transparency.
+- **Style:** Always transparent with a subtle `1px` solid white bottom border.
+- **Behavior:** Remains fixed at the top of the page at all times, regardless of scroll position.
 
 ### Buttons
 - **Primary:** Solid background, rounded-full, subtle shadow.
