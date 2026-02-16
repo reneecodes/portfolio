@@ -1,10 +1,23 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      const nav = document.querySelector('nav');
+      if (nav) {
+        document.body.style.paddingTop = `${nav.offsetHeight}px`;
+      }
+    };
+
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
+    return () => window.removeEventListener('resize', updateOffset);
+  }, []);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -16,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="sticky top-0 z-[1000] transition-all duration-300 ease-in-out bg-transparent py-5"
+      className="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ease-in-out bg-transparent py-5"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between items-center">
