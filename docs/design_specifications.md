@@ -61,8 +61,8 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 ## 7. Component Guidelines
 
 ### Navbar
-- **Style:** Always transparent with a subtle `1px` solid white bottom border.
-- **Behavior:** Remains fixed at the top of the page at all times, regardless of scroll position.
+- **Style:** Fully transparent with seamless transition to hero section (no separator).
+- **Behavior:** Sticky at the top of the viewport, remaining visible during scroll.
 
 ### Buttons
 - **Primary:** Solid background, rounded-full, subtle shadow.
