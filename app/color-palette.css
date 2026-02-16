@@ -102,8 +102,8 @@
   --color-rose-900: #881337;
 
   /* 🎨 Semantic Aliases - Accessibility Optimized */
-  --color-primary: var(--color-coral-600); /* Brand Identity */
-  --color-primary-dark: var(--color-coral-700); /* Text & Accessible Bg */
+  --color-primary: var(--color-coral-800); /* Brand Identity */
+  --color-primary-dark: var(--color-coral-900); /* Text & Accessible Bg */
   --color-primary-light: var(--color-coral-400); /* Decorative */
   
   --color-secondary: var(--color-sage-600);
