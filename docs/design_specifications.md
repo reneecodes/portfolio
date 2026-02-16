@@ -62,7 +62,7 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 
 ### Navbar
 - **Style:** Fully transparent with seamless transition to hero section (no separator).
-- **Behavior:** Fixed at the top of the viewport, remaining persistently visible during scroll, with dynamic content offset to prevent overlap and ensure responsiveness across devices.
+- **Behavior:** Fixed at the top of the viewport, remaining persistently visible during scroll, with dynamic content offset to prevent overlap and ensure responsiveness across devices (e.g., adjusts on window resize).
 
 ### Buttons
 - **Primary:** Solid background, rounded-full, subtle shadow.
