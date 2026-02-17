@@ -27,10 +27,10 @@ A refined palette moving beyond flat colors to subtle depth, using a unified can
 ### Core Colors (2025 Refreshed)
 | Role | Color Name | Tailwind Class | Hex Code |
 |------|------------|----------------|----------|
-| **Primary Accent** | **Coral Rose** | `text-coral-800` / `bg-coral-800` | `#99402e` |
+| **Primary Accent** | **Coral Rose** | `text-coral-600` / `bg-coral-600` | `#e15a3d` |
 | **Secondary Accent** | **Sage Green** | `text-sage-600` / `bg-sage-600` | `#4a7a4a` |
 | **Tertiary Accent** | **Lavender** | `text-lavender-600` | `#8a6bd1` |
-| **Action/Buttons** | **Coral Dark** | `bg-coral-900` | `#7d3729` (AA Compliant) |
+| **Action/Buttons** | **Coral Dark** | `bg-coral-700` | `#bc4a33` (AA Compliant) |
 
 ### Global Background Gradient
 The site uses a fixed radial gradient on the `body` to create a sophisticated "spotlight" effect that remains consistent as the user scrolls.
