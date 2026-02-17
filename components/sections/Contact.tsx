@@ -35,7 +35,7 @@ export default function Contact() {
             Send Me a Message ✉️
           </Button>
           <Button 
-            href="#resume-google-doc-link-placeholder"
+            href="https://drive.google.com/file/d/1ThKcGhDYec3pfmMqsfs20lRvEwXg3yDE/view?usp=drive_link"
             external
             variant="outline"
           >
