@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-left">
             <div className="animate-fade-in-up">
               <span className="inline-block py-1 px-3 rounded-full bg-primary-light/10 text-primary dark:text-primary-light text-sm font-semibold tracking-wide uppercase mb-6 border border-primary-light/20">
-                Senior UX Designer
+                UX Designer
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-warmgray-900 dark:text-warmgray-100 mb-6 leading-[1.1]">
                 Designing for <br className="hidden md:block" />
@@ -49,7 +49,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 z-10 mix-blend-overlay pointer-events-none" />
               <Image
                 src="/images/Profile-photo.jpg"
-                alt="Renee Martinez - Senior UX Designer"
+                alt="Renee Martinez - UX Designer"
                 fill
                 className="object-cover object-center"
                 priority

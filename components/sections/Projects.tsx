@@ -25,7 +25,7 @@ export default function Projects() {
     },
    
     {
-      title: 'Burger Lounge',
+      title: 'Wholesome Bite',
       description: 'An intuitive mobile ordering experience for a premium burger brand. Features include a customizable menu, seamless checkout flow, and a dedicated loyalty rewards system.',
       tags: ['Product Design', 'Mobile App'],
       link: 'https://www.behance.net/reneemartinez6',
