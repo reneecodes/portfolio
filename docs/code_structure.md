@@ -39,7 +39,11 @@ We follow the standard Next.js 16 **App Router** structure.
 - Since this is a static portfolio, content is hardcoded or imported from JSON/TS constants.
 - **Images:** Use `next/image` for optimization.
 
-## 6. Key Components
+## 6. Animations
+- **Library:** Framer Motion for all UI transitions and animations.
+- **Usage:** Implemented for staggered entrance animations on form fields and will be used for layout transitions and the success state.
+
+## 7. Key Components
 - `Navbar`: Responsive navigation.
 - `Hero`: Introduction area.
 - `Section`: Wrapper component for consistent padding/margins.
