@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import FormField from '@/components/ui/FormField';
 import ToggleGroup from '@/components/ui/ToggleGroup';
 
@@ -42,6 +43,21 @@ const InquiryForm = () => {
     { label: '3-6 Months', value: '3-6-months' },
     { label: 'Flexible', value: 'flexible' },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -122,84 +138,103 @@ const InquiryForm = () => {
 
   return (
     <section className="w-full max-w-6xl mx-auto py-24">
-      <h1 className="text-5xl font-bold tracking-tight text-center mb-16">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-16">
         Let's Create Something Amazing Together!
       </h1>
-      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <FormField
-          label="Your Name"
-          id="name"
-          name="name"
-          placeholder="Renee Martinez"
-          value={formData.name}
-          onChange={handleChange}
-          error={errors.name}
-          required
-        />
-        <FormField
-          label="Project Name"
-          id="projectName"
-          name="projectName"
-          placeholder="My Dream Portfolio Site"
-          value={formData.projectName}
-          onChange={handleChange}
-          error={errors.projectName}
-          required
-        />
-        <ToggleGroup
-          label="Project Type"
-          name="projectType"
-          options={projectTypeOptions}
-          selectedValue={formData.projectType}
-          onChange={handleProjectTypeChange}
-          error={errors.projectType}
-          required
-          allowCustom
-          customValue={formData.projectTypeCustom}
-          onCustomChange={handleChange}
-          customPlaceholder="e.g., UX Research, Content Strategy"
-        />
-        <ToggleGroup
-          label="The Budget"
-          name="budget"
-          options={budgetOptions}
-          selectedValue={formData.budget}
-          onChange={handleBudgetChange}
-          error={errors.budget}
-          required
-        />
-        <ToggleGroup
-          label="When do we start?"
-          name="timeline"
-          options={timelineOptions}
-          selectedValue={formData.timeline}
-          onChange={handleTimelineChange}
-          error={errors.timeline}
-                      required
-                    />
-                    <FormField
-                      label="Tell me your dream for this project"
-                      id="vibe"
-                      name="vibe"
-                      placeholder="e.g., I envision a website that feels whimsical and modern, with a touch of playful elegance."
-                      value={formData.vibe}
-                      onChange={handleChange}
-                      error={errors.vibe}
-                      textarea
-                      required
-                    />
-                    {/* Other form fields will go here */}
-                    <div className="md:col-span-2 lg:col-span-3 flex justify-center mt-8">
+      <motion.form
+        onSubmit={handleSubmit}
+        className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.div variants={itemVariants}>
+          <FormField
+            label="Your Name"
+            id="name"
+            name="name"
+            placeholder="Renee Martinez"
+            value={formData.name}
+            onChange={handleChange}
+            error={errors.name}
+            required
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <FormField
+            label="Project Name"
+            id="projectName"
+            name="projectName"
+            placeholder="My Dream Portfolio Site"
+            value={formData.projectName}
+            onChange={handleChange}
+            error={errors.projectName}
+            required
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <ToggleGroup
+            label="Project Type"
+            name="projectType"
+            options={projectTypeOptions}
+            selectedValue={formData.projectType}
+            onChange={handleProjectTypeChange}
+            error={errors.projectType}
+            required
+            allowCustom
+            customValue={formData.projectTypeCustom}
+            onCustomChange={handleChange}
+            customPlaceholder="e.g., UX Research, Content Strategy"
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <ToggleGroup
+            label="The Budget"
+            name="budget"
+            options={budgetOptions}
+            selectedValue={formData.budget}
+            onChange={handleBudgetChange}
+            error={errors.budget}
+            required
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <ToggleGroup
+            label="When do we start?"
+            name="timeline"
+            options={timelineOptions}
+            selectedValue={formData.timeline}
+            onChange={handleTimelineChange}
+            error={errors.timeline}
+            required
+          />
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <FormField
+            label="Tell me your dream for this project"
+            id="vibe"
+            name="vibe"
+            placeholder="e.g., I envision a website that feels whimsical and modern, with a touch of playful elegance."
+            value={formData.vibe}
+            onChange={handleChange}
+            error={errors.vibe}
+            textarea
+            required
+          />
+        </motion.div>
+        {/* Other form fields will go here */}
+        <motion.div variants={itemVariants} className="md:col-span-2 lg:col-span-3 flex justify-center mt-8">
           <button
             type="submit"
             className="px-8 py-4 bg-coral-700 text-white rounded-full font-semibold text-lg
-                       hover:bg-coral-600 transition-all duration-300 ease-in-out
+                       hover:bg-coral-600 hover:shadow-xl hover:shadow-coral-500/50 hover:scale-105
+                       transition-all duration-300 ease-in-out
                        focus:outline-none focus:ring-4 focus:ring-lavender-600 focus:ring-opacity-50"
           >
             Send Your Dream Project
           </button>
-        </div>
-      </form>
+        </motion.div>
+      </motion.form>
     </section>
   );
 };
