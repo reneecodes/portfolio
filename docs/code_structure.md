@@ -51,5 +51,6 @@ We follow the standard Next.js 16 **App Router** structure.
 - `ProjectCard`: Reusable card for portfolio items.
 - `Button`: Standardized button styles.
 - `InquiryForm`: The main inquiry form component, orchestrating all form fields and logic.
+- `InquiryFormSuccessMessage`: Displays the animated success state after a successful inquiry submission.
 - `FormField`: Reusable component for text inputs and textareas, ensuring consistent styling and validation.
 - `ToggleGroup`: Reusable component for button-based selection, used for Project Type, Budget, and Timeline.
