@@ -49,7 +49,7 @@ export default function Experience() {
               
               <div className="flex gap-8">
                 {/* Timeline Dot */}
-                <div className="flex-shrink-0 mt-1.5 relative">
+                <div className="shrink-0 mt-1.5 relative">
                   <div className="w-6 h-6 rounded-full border-4 border-white dark:border-black bg-primary-light/20 dark:bg-primary-dark/40 z-10 relative shadow-sm group-hover:scale-125 transition-transform duration-300">
                     <div className="absolute inset-0 m-auto w-2 h-2 rounded-full bg-primary dark:bg-primary-light" />
                   </div>

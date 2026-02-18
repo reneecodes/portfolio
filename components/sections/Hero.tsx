@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 
@@ -18,7 +17,7 @@ export default function Hero() {
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-warmgray-900 dark:text-warmgray-100 mb-6 leading-[1.1]">
                 Designing for <br className="hidden md:block" />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
                   human clarity.
                 </span>
               </h1>
@@ -45,8 +44,8 @@ export default function Hero() {
           </div>
           
           <div className="flex-1 flex justify-center md:justify-end animate-fade-in-up delay-300">
-            <div className="relative w-64 h-64 md:w-[400px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 z-10 mix-blend-overlay pointer-events-none" />
+            <div className="relative w-64 h-64 md:w-[400px] md:h-[400px] rounded-4xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out">
+              <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-accent/20 z-10 mix-blend-overlay pointer-events-none" />
               <Image
                 src="/images/Profile-photo.jpg"
                 alt="Renee Martinez - UX Designer"

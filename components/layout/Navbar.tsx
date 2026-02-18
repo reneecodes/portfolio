@@ -29,11 +29,11 @@ export default function Navbar() {
 
   return (
     <nav 
-      className="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ease-in-out bg-transparent py-5"
+      className="fixed top-0 left-0 right-0 z-1000 transition-all duration-300 ease-in-out bg-transparent py-5"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Link 
               href="/" 
               className="text-xl font-bold tracking-tight transition-colors group text-white"

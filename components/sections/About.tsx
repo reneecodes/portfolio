@@ -5,7 +5,7 @@ export default function About() {
         <div className="animate-fade-in-up">
           <span className="text-primary dark:text-primary-light font-semibold tracking-wider uppercase text-sm">About Me</span>
           <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
-            I believe the best designs feel like they <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent dark:from-primary-light dark:to-accent-light">aren&apos;t even there.</span>
+            I believe the best designs feel like they <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-accent dark:from-primary-light dark:to-accent-light">aren&apos;t even there.</span>
           </h2>
         </div>
         

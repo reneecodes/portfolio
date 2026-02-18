@@ -76,7 +76,7 @@ export default function Projects() {
                   />
                 ) : (
                   <>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`} />
+                    <div className={`absolute inset-0 bg-linear-to-br ${project.gradient}`} />
                     <span className="relative text-6xl filter drop-shadow-lg transform group-hover:scale-110 transition-transform duration-500">{project.icon}</span>
                   </>
                 )}

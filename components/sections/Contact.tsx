@@ -12,7 +12,7 @@ export default function Contact() {
             Get In Touch
           </span>
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
-            Ready to Build Products That <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Users Love?</span>
+            Ready to Build Products That <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-accent">Users Love?</span>
           </h2>
         </div>
 

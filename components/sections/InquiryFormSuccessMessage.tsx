@@ -11,7 +11,7 @@ const InquirySuccessMessage: React.FC<InquirySuccessMessageProps> = ({ onReset }
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-lavender-100 to-coral-50 rounded-3xl shadow-xl max-w-md mx-auto"
+      className="flex flex-col items-center justify-center text-center p-8 bg-linear-to-br from-lavender-100 to-coral-50 rounded-3xl shadow-xl max-w-md mx-auto"
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
