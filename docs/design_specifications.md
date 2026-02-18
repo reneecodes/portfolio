@@ -82,16 +82,16 @@ Using **Tailwind CSS v4 native animations** and custom CSS keyframes for a high-
 A dedicated section to showcase technical proficiencies with a focus on clarity and visual appeal.
 
 ### Structure
-- **Categorization:** Skills are organized into three main cards: **Design & Research**, **Frontend Development**, and **Tools & Workflow**.
-- **Card Layout:** Each card features a bold header and is divided into logical subsections (e.g., "Languages", "Frameworks").
-- **List Style:** Skills are presented as bulleted lists.
-- **Grid Layout:** Responsive grid adapting from 1 column (mobile) to 3 columns (desktop).
+- **Categorization:** Skills are organized into six focused cards: **Design**, **Research**, **AI**, **Tech Workflow**, **Tools**, and **Platforms**.
+- **Card Layout:** Each card features a bold header and focused skill list, optimized for quick scanning.
+- **List Style:** Skills are presented as bulleted lists with proficiency badges.
+- **Grid Layout:** 3x2 responsive grid (3 columns × 2 rows on desktop) adapting from 1 column (mobile) to 2 columns (tablet) to 3 columns (desktop).
 
 ### Visual Style
 - **Color Coding:** Each category is assigned a specific accent color from the palette, applied to the top border and bullet points:
   - **Design & Research:** Coral (Creativity, Warmth)
-  - **Frontend Development:** Sage (Growth, Balance)
-  - **Tools & Workflow:** Lavender (Sophistication, Tech)
+  - **AI & Tech Workflow:** Sage (Growth, Balance)  
+  - **Tools & Platforms:** Lavender (Sophistication, Tech)
 - **Typography:**
   - **Headers:** Bold and prominent.
   - **Subsections:** Uppercase, tracking-wider, with a subtle separator line.

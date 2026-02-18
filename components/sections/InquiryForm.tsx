@@ -246,12 +246,9 @@ const InquiryForm = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg sm:text-xl text-warm-gray-700 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg sm:text-xl text-white max-w-3xl mx-auto leading-relaxed"
         >
-          Ready to bring your vision to life? I&apos;m here to transform your ideas into 
-          <span className="text-coral-600 font-semibold">beautiful, functional designs</span> that 
-          <span className="text-lavender-600 font-semibold">captivate your audience</span> and 
-          <span className="text-sage-600 font-semibold">drive real results</span>.
+          Ready to bring your vision to life? I'm here to transform your ideas into beautiful, functional designs that captivate your audience and drive real results.
         </motion.p>
       </div>
 
@@ -311,10 +308,10 @@ const InquiryForm = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20"
+                className="bg-transparent border border-white/20 rounded-3xl p-16 shadow-xl"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">First, let&apos;s get to know each other!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">First, let's get to know each other!</h2>
                   <p className="text-warm-gray-600">Tell me a bit about yourself and your project.</p>
                 </div>
                 
@@ -365,10 +362,10 @@ const InquiryForm = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20"
+                className="bg-transparent border border-white/20 rounded-3xl p-16 shadow-xl"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">Let&apos;s talk details!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">Let's talk details!</h2>
                   <p className="text-warm-gray-600">Help me understand the scope and timeline.</p>
                 </div>
                 
@@ -442,10 +439,10 @@ const InquiryForm = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20"
+                className="bg-transparent border border-white/20 rounded-3xl p-16 shadow-xl"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">Share your vision!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">Share your vision!</h2>
                   <p className="text-warm-gray-600">This is where the magic happens. Tell me everything!</p>
                 </div>
                 
