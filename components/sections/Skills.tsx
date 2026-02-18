@@ -41,27 +41,6 @@ const skillsData: SkillCategory[] = [
     ],
   },
   {
-    title: 'Frontend Development',
-    accentColor: 'sage',
-    subsections: [
-      {
-        title: 'Languages',
-        skills: [
-          { name: 'HTML5', proficiency: 'Intermediate' },
-          { name: 'CSS3', proficiency: 'Intermediate' },
-          { name: 'JavaScript', proficiency: 'Intermediate' },
-        ],
-      },
-      {
-        title: 'Frameworks & Tools',
-        skills: [
-          { name: 'React', proficiency: 'Familiar' },
-          { name: 'Tailwind CSS', proficiency: 'Familiar' },
-        ],
-      },
-    ],
-  },
-  {
     title: 'Tools & Workflow',
     accentColor: 'lavender',
     subsections: [

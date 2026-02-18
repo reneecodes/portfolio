@@ -31,7 +31,7 @@ const InquirySuccessMessage: React.FC<InquirySuccessMessageProps> = ({ onReset }
 
       <h2 className="text-3xl font-bold text-lavender-800 mb-4">Yay! Project Sent!</h2>
       <p className="text-lg text-gray-700 mb-8">
-        Your dream project inquiry has landed safely in my inbox. ✨ I'm so excited to review it and will be in touch very soon!
+        Your dream project inquiry has landed safely in my inbox. ✨ I&apos;m so excited to review it and will be in touch very soon!
       </p>
       <motion.button
         whileHover={{ scale: 1.05 }}

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import FormField from '@/components/ui/FormField';
@@ -92,7 +94,7 @@ const InquiryForm = () => {
 
   const validateForm = () => {
     let isValid = true;
-    const newErrors = { name: '', projectName: '', projectType: '', projectTypeCustom: '', budget: '', timeline: '' };
+    const newErrors = { name: '', projectName: '', projectType: '', projectTypeCustom: '', budget: '', timeline: '', vibe: '' };
 
     if (!formData.name.trim()) {
       newErrors.name = 'Your name is required, sweetie!';
@@ -113,7 +115,7 @@ const InquiryForm = () => {
     }
 
     if (!formData.budget) {
-      newErrors.budget = 'Let's talk budget, darling!';
+      newErrors.budget = "Let's talk budget, darling!";
       isValid = false;
     }
 
@@ -179,7 +181,7 @@ const InquiryForm = () => {
             const newErrors: typeof errors = { ...errors };
             for (const key in result.errors) {
               if (key in newErrors) {
-                newErrors[key as keyof typeof newErrors] = result.errors[key]![0];
+                newErrors[key as keyof typeof newErrors] = result.errors.get(key)![0];
               }
             }
             setErrors(newErrors);
@@ -200,7 +202,7 @@ const InquiryForm = () => {
   return (
     <section className="w-full max-w-6xl mx-auto py-24">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-16">
-        Let's Create Something Amazing Together!
+        Let&apos;s Create Something Amazing Together!
       </h1>
       {submissionSuccess ? (
         <InquiryFormSuccessMessage onReset={resetForm} />

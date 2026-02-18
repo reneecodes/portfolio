@@ -25,7 +25,7 @@ export default function Hero() {
             </div>
             
             <p className="animate-fade-in-up delay-100 text-xl md:text-2xl text-warmgray-600 dark:text-warmgray-400 mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
-              Hi, I'm Renee. I specialize in turning complex data into intuitive, 
+              Hi, I&apos;m Renee. I specialize in turning complex data into intuitive, 
               <span className="text-warmgray-900 dark:text-warmgray-200 font-medium"> invisible </span> 
               digital experiences.
             </p>

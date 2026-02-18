@@ -220,7 +220,7 @@ export default function StyleGuide() {
             </h3>
             <p className="text-xl text-warmgray-600 dark:text-warmgray-400 mb-8 max-w-2xl mx-auto">
               This palette creates the perfect balance of creative energy and professional credibility. 
-              It's modern, accessible, and uniquely you!
+              It&apos;s modern, accessible, and uniquely you!
             </p>
             <Link 
               href="/"
