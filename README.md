@@ -6,7 +6,7 @@ Renee Martinez is a Lead UI/UX Designer specializing in turning "information ove
 This portfolio has been completely revamped to reflect a **Senior Designer's aesthetic**, featuring:
 - **Sophisticated Glassmorphism:** High-end transparency and blur effects.
 - **Unified Canvas Background:** A sleek radial gradient that stays fixed as you scroll.
-- **Skills & Tools:** A comprehensive, categorized overview of technical proficiency.
+- **Skills & Tools:** A beautiful, interactive "bento box" grid that highlights the toolkit.
 - **Fluid CSS Animations:** Staggered entrance effects and smooth micro-interactions.
 - **Modern Typography:** Optimized for legibility and visual hierarchy.
 

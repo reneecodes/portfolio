@@ -47,7 +47,7 @@ We follow the standard Next.js 16 **App Router** structure.
 - `Navbar`: Responsive navigation.
 - `Hero`: Introduction area.
 - `Section`: Wrapper component for consistent padding/margins.
-- `Skills`: Detailed skills display with 3-card layout and proficiency badges.
+- `SkillsTools`: A responsive, on-trend "bento box" grid showcasing tools and technologies with custom SVG icons.
 - `ProjectCard`: Reusable card for portfolio items.
 - `Button`: Standardized button styles.
 - `InquiryForm`: A complete redesign implementing a "Dream Canvas" concept. This is now a multi-step component that guides the user through a 3-step process. It orchestrates the entire experience, including the progress indicator, step transitions, and final submission.
