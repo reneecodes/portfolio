@@ -30,6 +30,7 @@ const InquiryForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
+  const [submissionError, setSubmissionError] = useState<string | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 3;
 
@@ -86,6 +87,11 @@ const InquiryForm = () => {
   const handleBudgetChange = (value: string) => {
     setFormData((prevData) => ({ ...prevData, budget: value }));
     setErrors((prevErrors) => ({ ...prevErrors, budget: '' }));
+  };
+
+  const handleTimelineChange = (value: string) => {
+    setFormData((prevData) => ({ ...prevData, timeline: value }));
+    setErrors((prevErrors) => ({ ...prevErrors, timeline: '' }));
   };
 
   const nextStep = () => {
@@ -227,7 +233,7 @@ const InquiryForm = () => {
         >
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">
-              Let's Create Something
+              Let&apos;s Create Something
             </span>
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sage-600 via-coral-600 to-lavender-600">
@@ -242,7 +248,7 @@ const InquiryForm = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg sm:text-xl text-warm-gray-700 max-w-3xl mx-auto leading-relaxed"
         >
-          Ready to bring your vision to life? I'm here to transform your ideas into 
+          Ready to bring your vision to life? I&apos;m here to transform your ideas into 
           <span className="text-coral-600 font-semibold">beautiful, functional designs</span> that 
           <span className="text-lavender-600 font-semibold">captivate your audience</span> and 
           <span className="text-sage-600 font-semibold">drive real results</span>.
@@ -253,7 +259,6 @@ const InquiryForm = () => {
         <InquiryFormSuccessMessage onReset={resetForm} />
       ) : (
         <>
-        <>
           {submissionError && (
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -263,42 +268,41 @@ const InquiryForm = () => {
               {submissionError}
             </motion.div>
           )}
-        <div className="relative z-10">
-          {/* Progress Indicator */}
-          <div className="w-full max-w-lg mx-auto mb-12">
-            <div className="flex justify-between items-center mb-2">
-              {[...Array(totalSteps)].map((_, i) => (
-                <div key={i} className="flex flex-col items-center">
-                  <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 ${currentStep >= i + 1 ? 'bg-coral-600 text-white' : 'bg-gray-200 text-gray-500'}`}
-                  >
-                    {i + 1}
+          <div className="relative z-10">
+            {/* Progress Indicator */}
+            <div className="w-full max-w-lg mx-auto mb-12">
+              <div className="flex justify-between items-center mb-2">
+                {[...Array(totalSteps)].map((_, i) => (
+                  <div key={i} className="flex flex-col items-center">
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 ${currentStep >= i + 1 ? 'bg-coral-600 text-white' : 'bg-gray-200 text-gray-500'}`}
+                    >
+                      {i + 1}
+                    </div>
+                    <p className={`mt-2 text-sm font-medium ${currentStep >= i + 1 ? 'text-coral-600' : 'text-gray-500'}`}>
+                      {['The Basics', 'Project Details', 'Your Vision'][i]}
+                    </p>
                   </div>
-                  <p className={`mt-2 text-sm font-medium ${currentStep >= i + 1 ? 'text-coral-600' : 'text-gray-500'}`}>
-                    {['The Basics', 'Project Details', 'Your Vision'][i]}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-2">
+                <motion.div
+                  className="bg-coral-600 h-2 rounded-full"
+                  initial={{ width: '0%' }}
+                  animate={{ width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%` }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                />
+              </div>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <motion.div
-                className="bg-coral-600 h-2 rounded-full"
-                initial={{ width: '0%' }}
-                animate={{ width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%` }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
-              />
-            </div>
-          </div>
 
-          <AnimatePresence mode="wait">
-            <motion.form
-            onSubmit={handleSubmit}
-            className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className="space-y-8"
-          >
+            <AnimatePresence mode="wait">
+              <motion.form
+                onSubmit={handleSubmit}
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="space-y-8"
+              >
             {/* Step 1: The Basics */}
             {currentStep === 1 && (
               <motion.div
@@ -310,7 +314,7 @@ const InquiryForm = () => {
                 className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">First, let's get to know each other!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">First, let&apos;s get to know each other!</h2>
                   <p className="text-warm-gray-600">Tell me a bit about yourself and your project.</p>
                 </div>
                 
@@ -364,7 +368,7 @@ const InquiryForm = () => {
                 className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">Let's talk details!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2">Let&apos;s talk details!</h2>
                   <p className="text-warm-gray-600">Help me understand the scope and timeline.</p>
                 </div>
                 
@@ -494,10 +498,10 @@ const InquiryForm = () => {
               </motion.div>
             )}
           </motion.form>
-          </AnimatePresence>
-        </div>
-        </>
-      )}
+        </AnimatePresence>
+      </div>
+    </>
+  )}
     </section>
   );
 };
