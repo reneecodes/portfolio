@@ -51,6 +51,6 @@ We follow the standard Next.js 16 **App Router** structure.
 - `ProjectCard`: Reusable card for portfolio items.
 - `Button`: Standardized button styles.
 - `InquiryForm`: A complete redesign implementing a "Dream Canvas" concept. This is now a multi-step component that guides the user through a 3-step process. It orchestrates the entire experience, including the progress indicator, step transitions, and final submission.
-- `InquiryFormSuccessMessage`: Displays the animated success state after a successful inquiry submission. It includes a "Send Another Dream" button to reset the form.
+- `HomeInquiryForm`: A light, modern 3-step interactive inquiry form for the homepage. Implements glassmorphism styling (bg-white/30, soft blurs), Framer Motion for staggered entrances and slide transitions, Zod for client/server validation, and a whimsical SVG sparkle success animation. Reuses FormField for inputs and adds visual selectable cards/grids for choices.
 - `FormField`: Reusable component for text inputs and textareas, ensuring consistent styling and validation.
 - `ToggleGroup`: Reusable component for button-based selection, used for Project Type, Budget, and Timeline.

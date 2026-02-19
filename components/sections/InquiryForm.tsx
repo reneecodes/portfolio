@@ -232,11 +232,11 @@ const InquiryForm = () => {
           className="mb-6"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-coral-600 via-lavender-600 to-sage-600">
               Let&apos;s Create Something
             </span>
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sage-600 via-coral-600 to-lavender-600">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-coral-600 via-lavender-600 to-sage-600">
               Amazing Together!
             </span>
           </h1>
@@ -248,7 +248,7 @@ const InquiryForm = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg sm:text-xl text-white max-w-3xl mx-auto leading-relaxed"
         >
-          Ready to bring your vision to life? I'm here to transform your ideas into beautiful, functional designs that captivate your audience and drive real results.
+          Ready to bring your vision to life? I&apos;m here to transform your ideas into beautiful, functional designs that captivate your audience and drive real results.
         </motion.p>
       </div>
 
@@ -311,7 +311,7 @@ const InquiryForm = () => {
                 className="bg-transparent border border-white/20 rounded-3xl p-16 shadow-xl"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">First, let's get to know each other!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-linear-to-r from-coral-600 via-lavender-600 to-sage-600">First, let&apos;s get to know each other!</h2>
                   <p className="text-warm-gray-600">Tell me a bit about yourself and your project.</p>
                 </div>
                 
@@ -365,7 +365,7 @@ const InquiryForm = () => {
                 className="bg-transparent border border-white/20 rounded-3xl p-16 shadow-xl"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">Let's talk details!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-linear-to-r from-coral-600 via-lavender-600 to-sage-600">Let&apos;s talk details!</h2>
                   <p className="text-warm-gray-600">Help me understand the scope and timeline.</p>
                 </div>
                 
@@ -442,7 +442,7 @@ const InquiryForm = () => {
                 className="bg-transparent border border-white/20 rounded-3xl p-16 shadow-xl"
               >
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-coral-600 via-lavender-600 to-sage-600">Share your vision!</h2>
+                  <h2 className="text-2xl font-bold text-warm-gray-800 mb-2 bg-clip-text text-transparent bg-linear-to-r from-coral-600 via-lavender-600 to-sage-600">Share your vision!</h2>
                   <p className="text-warm-gray-600">This is where the magic happens. Tell me everything!</p>
                 </div>
                 
@@ -471,7 +471,7 @@ const InquiryForm = () => {
                   <motion.div variants={itemVariants}>
                     <button
                       type="submit"
-                      className="px-8 py-4 bg-gradient-to-r from-coral-600 to-lavender-600 text-white rounded-full font-bold text-lg
+                      className="px-8 py-4 bg-linear-to-r from-coral-600 to-lavender-600 text-white rounded-full font-bold text-lg
                                  hover:from-coral-700 hover:to-lavender-700
                                  transition-all duration-300 hover:scale-105 hover:shadow-2xl
                                  focus:outline-none focus:ring-4 focus:ring-lavender-300
