@@ -50,7 +50,7 @@ const ToggleGroup: React.FC<ToggleGroupProps> = ({
                 ? 'bg-lavender-600 border-lavender-600 text-white shadow-lg'
                 : 'bg-white border-warm-gray-300 text-warm-gray-700 hover:border-lavender-400 hover:text-lavender-600'
               }
-              focus:outline-none focus:ring-2 focus:ring-lavender-600 focus:ring-opacity-50
+              focus:outline-none focus:ring-2 focus:ring-lavender-600 focus:ring-opacity-50 focus:shadow-lg focus:shadow-lavender-500/20
             `}
           >
             {option.label}
@@ -66,8 +66,8 @@ const ToggleGroup: React.FC<ToggleGroupProps> = ({
           onChange={onCustomChange}
           className={`
             w-full p-3 border rounded-lg bg-white/10 text-warm-gray-800 placeholder-warm-gray-500
-            focus:outline-none focus:ring-2 focus:ring-lavender-600 focus:border-transparent
-            transition-all duration-200 ease-in-out mt-3
+            focus:outline-none focus:ring-2 focus:ring-lavender-600 focus:border-transparent focus:shadow-lg focus:shadow-lavender-500/20
+            transition-all duration-200 ease-in-out mt-3 hover:border-lavender-300
             ${error ? 'border-rose-500' : 'border-warm-gray-300'}
           `}
         />

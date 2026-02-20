@@ -4,18 +4,18 @@ import Experience from '@/components/sections/Experience';
 import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
-import HomeInquiryForm from '@/components/sections/HomeInquiryForm';
+import HomepageInquiryForm from '@/components/sections/HomepageInquiryForm';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main>
         <Hero />
-        <HomeInquiryForm />
         <About />
         <Experience />
         <Skills />
         <Projects />
+        <HomepageInquiryForm />
         <Contact />
       </main>
     </div>

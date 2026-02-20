@@ -27,8 +27,8 @@ const FormField: React.FC<FormFieldProps> = ({
 }) => {
   const inputClasses = `
     w-full p-3 border rounded-lg bg-white/10 text-warm-gray-800 placeholder-warm-gray-500
-    focus:outline-none focus:ring-2 focus:ring-lavender-600 focus:border-transparent
-    transition-all duration-200 ease-in-out
+    focus:outline-none focus:ring-2 focus:ring-lavender-600 focus:border-transparent focus:shadow-lg focus:shadow-lavender-500/20
+    transition-all duration-200 ease-in-out hover:border-lavender-300
     ${error ? 'border-rose-500' : 'border-warm-gray-300'}
   `;
 
