@@ -9,6 +9,7 @@ This portfolio has been completely revamped to reflect a **Senior Designer's aes
 - **Skills & Tools:** A comprehensive, categorized overview of technical proficiency (now featuring a 3x2 grid layout for improved information density).
 - **Fluid CSS Animations:** Staggered entrance effects and smooth micro-interactions.
 - **Modern Typography:** Optimized for legibility and visual hierarchy.
+- **Multi-Step Inquiry Form:** An intelligent, accessibility-first contact form with client-side validation and conditional logic.
 
 ## 🚀 Getting Started
 
@@ -48,12 +49,25 @@ To start the production server:
 npm start
 ```
 
+## 📝 Multi-Step Inquiry Form Features
+
+The portfolio includes a sophisticated inquiry form with:
+- **Three-Step Process:** Identity & Vision → Project Details → Logistics & Timeline
+- **Smart Validation:** Real-time client-side validation with clear error messages
+- **Conditional Logic:** Website-specific questions appear only when "Website" is selected
+- **Accessibility First:** ARIA attributes, semantic HTML, and keyboard navigation
+- **Data Persistence:** Form data is preserved across steps
+- **Smooth Animations:** Framer-motion powered transitions between steps
+- **Responsive Design:** Optimized for all screen sizes
+- **Type Safety:** Full TypeScript integration with Zod validation
+
 ## 📂 Project Structure
 ```
 renee-portfolio/
 ├── app/                # Next.js App Router pages and layouts
-├── components/         # Reusable React components
+├── components/         # Reusable React components (including inquiry form)
 ├── docs/               # Design and code documentation
+├── lib/                # Utility functions and validation schemas
 ├── public/             # Static assets (images, fonts)
 ├── styles/             # Global styles
 ├── package.json        # Project dependencies and scripts

@@ -44,18 +44,20 @@ export const step1Schema = z.object({
     .max(254, 'Email address is too long'),
   
   projectType: z
-    .enum(PROJECT_TYPES, {
-      error: () => ({ message: 'Please select a project type' })
+    .enum(PROJECT_TYPES)
+    .refine((val) => val !== undefined, {
+      message: 'Please select a project type'
     })
 });
 
 // Schema for Step 2: The Deep Dive
 export const step2Schema = z.object({
   websiteScope: z
-    .enum(WEBSITE_SCOPES, {
-      error: () => ({ message: 'Please select a website scope' })
-    })
-    .optional(),
+    .enum(WEBSITE_SCOPES)
+    .optional()
+    .refine((val) => val !== undefined, {
+      message: 'Please select a website scope'
+    }),
   
   projectDescription: z
     .string()
@@ -68,16 +70,18 @@ export const step2Schema = z.object({
     .max(2000, 'Brand description must be less than 2000 characters'),
   
   primaryGoal: z
-    .enum(PRIMARY_GOALS, {
-      error: () => ({ message: 'Please select a primary goal' })
+    .enum(PRIMARY_GOALS)
+    .refine((val) => val !== undefined, {
+      message: 'Please select a primary goal'
     })
 });
 
 // Schema for Step 3: Logistics & Launch
 export const step3Schema = z.object({
   timeframe: z
-    .enum(TIMEFRAMES, {
-      error: () => ({ message: 'Please select an expected timeframe' })
+    .enum(TIMEFRAMES)
+    .refine((val) => val !== undefined, {
+      message: 'Please select an expected timeframe'
     }),
   
   budgetRange: z
