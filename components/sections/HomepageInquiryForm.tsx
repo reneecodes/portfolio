@@ -162,7 +162,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('projectDescription')}
           id="projectDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder-gray-300 resize-none"
           placeholder="Describe the problem we are solving, your target audience, and what you hope to achieve."
           aria-invalid={errors.projectDescription ? 'true' : 'false'}
           aria-describedby={errors.projectDescription ? 'projectDescription-error' : undefined}
@@ -181,8 +181,8 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('brandDescription')}
           id="brandDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm resize-none"
-          placeholder="What are your core values or mission? What makes your brand unique?"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder-gray-300 resize-none"
+          placeholder="Tell me about your brand’s personality, values, and what makes you unique."
           aria-invalid={errors.brandDescription ? 'true' : 'false'}
           aria-describedby={errors.brandDescription ? 'brandDescription-error' : undefined}
         />
@@ -275,7 +275,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('additionalInfo')}
           id="additionalInfo"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder-gray-300 resize-none"
           placeholder="Links to current site, competitors you admire, specific features you envision, preferred technologies, etc."
           aria-invalid={errors.additionalInfo ? 'true' : 'false'}
           aria-describedby={errors.additionalInfo ? 'additionalInfo-error' : undefined}
@@ -429,7 +429,7 @@ export default function HomepageInquiryForm() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto p-6 border-[1.5in] border-white">
       {/* Progress indicator */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
