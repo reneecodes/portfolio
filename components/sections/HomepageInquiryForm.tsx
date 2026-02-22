@@ -155,38 +155,38 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
       </AnimatePresence>
 
       <div className="space-y-2">
-        <label htmlFor="projectDescription" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="projectDescription" className="block text-sm font-medium text-white">
           Tell me about your project. *
         </label>
         <textarea
           {...register('projectDescription')}
           id="projectDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder-gray-300 resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm resize-none"
           placeholder="Describe the problem we are solving, your target audience, and what you hope to achieve."
           aria-invalid={errors.projectDescription ? 'true' : 'false'}
           aria-describedby={errors.projectDescription ? 'projectDescription-error' : undefined}
         />
-        <p className="text-xs text-gray-500">Minimum 50 characters</p>
+        <p className="text-xs text-white">Minimum 50 characters</p>
         {errors.projectDescription && (
           <p id="projectDescription-error" className="text-sm text-red-600">{errors.projectDescription.message}</p>
         )}
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="brandDescription" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="brandDescription" className="block text-sm font-medium text-white">
           Tell me about yourself/your brand. *
         </label>
         <textarea
           {...register('brandDescription')}
           id="brandDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder-gray-300 resize-none"
-          placeholder="Tell me about your brand’s personality, values, and what makes you unique."
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm resize-none"
+          placeholder="What are your core values or mission? What makes your brand unique?"
           aria-invalid={errors.brandDescription ? 'true' : 'false'}
           aria-describedby={errors.brandDescription ? 'brandDescription-error' : undefined}
         />
-        <p className="text-xs text-gray-500">Minimum 30 characters</p>
+        <p className="text-xs text-white">Minimum 30 characters</p>
         {errors.brandDescription && (
           <p id="brandDescription-error" className="text-sm text-red-600">{errors.brandDescription.message}</p>
         )}
@@ -268,14 +268,14 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="additionalInfo" className="block text-sm font-medium text-white">
           Anything else I should know?
         </label>
         <textarea
           {...register('additionalInfo')}
           id="additionalInfo"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder-gray-300 resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm resize-none"
           placeholder="Links to current site, competitors you admire, specific features you envision, preferred technologies, etc."
           aria-invalid={errors.additionalInfo ? 'true' : 'false'}
           aria-describedby={errors.additionalInfo ? 'additionalInfo-error' : undefined}
@@ -389,7 +389,7 @@ export default function HomepageInquiryForm() {
   if (submissionSuccess) {
     return (
       <motion.div 
-        className="max-w-2xl mx-auto p-8 text-center"
+        className="max-w-2xl mx-auto p-8 text-center border-[50px] border-white"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -429,7 +429,7 @@ export default function HomepageInquiryForm() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 border-[1.5in] border-white">
+    <div className="max-w-2xl mx-auto p-6 border-[50px] border-white">
       {/* Progress indicator */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
