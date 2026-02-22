@@ -37,14 +37,14 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
       transition={{ duration: 0.3 }}
     >
       <div className="space-y-2">
-        <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="fullName" className="block text-sm font-medium text-white">
           Full Name *
         </label>
         <input
           {...register('fullName')}
           id="fullName"
           type="text"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm"
           placeholder="Enter your full name"
           aria-invalid={errors.fullName ? 'true' : 'false'}
           aria-describedby={errors.fullName ? 'fullName-error' : undefined}
@@ -55,14 +55,14 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="emailAddress" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="emailAddress" className="block text-sm font-medium text-white">
           Email Address *
         </label>
         <input
           {...register('emailAddress')}
           id="emailAddress"
           type="email"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm"
           placeholder="your.email@example.com"
           aria-invalid={errors.emailAddress ? 'true' : 'false'}
           aria-describedby={errors.emailAddress ? 'emailAddress-error' : undefined}
@@ -73,7 +73,7 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
       </div>
 
       <div className="space-y-3">
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-white">
           Project Type *
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-required="true">
@@ -89,8 +89,8 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
               <div className={`
                 p-4 rounded-lg border-2 transition-all duration-200
                 ${selectedProjectType === type 
-                  ? 'border-purple-500 bg-purple-50 text-purple-700 shadow-md' 
-                  : 'border-gray-200 hover:border-gray-300 text-gray-700 hover:shadow-sm'
+                  ? 'border-purple-500 bg-purple-900/50 text-white shadow-md' 
+                  : 'border-gray-500 bg-transparent text-gray-300 hover:border-white hover:text-white'
                 }
                 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2
               `}>
@@ -130,7 +130,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-white">
               Scope *
             </label>
             <div className="space-y-2" role="radiogroup" aria-required="true">
@@ -143,7 +143,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
                     className="mr-3 text-purple-600 focus:ring-purple-500 h-4 w-4"
                     aria-invalid={errors.websiteScope ? 'true' : 'false'}
                   />
-                  <span className="text-gray-700">{scope}</span>
+                  <span className="text-white">{scope}</span>
                 </label>
               ))}
             </div>
@@ -162,7 +162,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('projectDescription')}
           id="projectDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
           placeholder="Describe the problem we are solving, your target audience, and what you hope to achieve."
           aria-invalid={errors.projectDescription ? 'true' : 'false'}
           aria-describedby={errors.projectDescription ? 'projectDescription-error' : undefined}
@@ -181,7 +181,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('brandDescription')}
           id="brandDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
           placeholder="What are your core values or mission? What makes your brand unique?"
           aria-invalid={errors.brandDescription ? 'true' : 'false'}
           aria-describedby={errors.brandDescription ? 'brandDescription-error' : undefined}
@@ -193,19 +193,19 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="primaryGoal" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="primaryGoal" className="block text-sm font-medium text-white">
           What is your primary goal? *
         </label>
         <select
           {...register('primaryGoal')}
           id="primaryGoal"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm"
           aria-invalid={errors.primaryGoal ? 'true' : 'false'}
           aria-describedby={errors.primaryGoal ? 'primaryGoal-error' : undefined}
         >
-          <option value="">Select a goal...</option>
+          <option value="" className="bg-gray-800">Select a goal...</option>
           {PRIMARY_GOALS.map((goal) => (
-            <option key={goal} value={goal}>{goal}</option>
+            <option key={goal} value={goal} className="bg-gray-800">{goal}</option>
           ))}
         </select>
         {errors.primaryGoal && (
@@ -229,19 +229,19 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
       transition={{ duration: 0.3 }}
     >
       <div className="space-y-2">
-        <label htmlFor="timeframe" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="timeframe" className="block text-sm font-medium text-white">
           Expected Timeframe *
         </label>
         <select
           {...register('timeframe')}
           id="timeframe"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm"
           aria-invalid={errors.timeframe ? 'true' : 'false'}
           aria-describedby={errors.timeframe ? 'timeframe-error' : undefined}
         >
-          <option value="">Select a timeframe...</option>
+          <option value="" className="bg-gray-800">Select a timeframe...</option>
           {TIMEFRAMES.map((timeframe) => (
-            <option key={timeframe} value={timeframe}>{timeframe}</option>
+            <option key={timeframe} value={timeframe} className="bg-gray-800">{timeframe}</option>
           ))}
         </select>
         {errors.timeframe && (
@@ -250,14 +250,14 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="budgetRange" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="budgetRange" className="block text-sm font-medium text-white">
           Budget Range (Optional)
         </label>
         <input
           {...register('budgetRange')}
           id="budgetRange"
           type="text"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm"
           placeholder="e.g., $5000-10000"
           aria-invalid={errors.budgetRange ? 'true' : 'false'}
           aria-describedby={errors.budgetRange ? 'budgetRange-error' : undefined}
@@ -275,7 +275,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('additionalInfo')}
           id="additionalInfo"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
           placeholder="Links to current site, competitors you admire, specific features you envision, preferred technologies, etc."
           aria-invalid={errors.additionalInfo ? 'true' : 'false'}
           aria-describedby={errors.additionalInfo ? 'additionalInfo-error' : undefined}
@@ -389,7 +389,7 @@ export default function HomepageInquiryForm() {
   if (submissionSuccess) {
     return (
       <motion.div 
-        className="max-w-2xl mx-auto p-8 text-center border-[50px] border-white"
+        className="max-w-2xl mx-auto p-8 text-center border-[25px] border-white"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -421,20 +421,20 @@ export default function HomepageInquiryForm() {
             />
           ))}
         </div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
-        <p className="text-lg text-gray-600 mb-2">Your project inquiry has been submitted successfully.</p>
-        <p className="text-gray-500">I'll get back to you within 24-48 hours. Can't wait to hear about your vision!</p>
+        <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
+        <p className="text-lg text-white/80 mb-2">Your project inquiry has been submitted successfully.</p>
+        <p className="text-white/60">I'll get back to you within 24-48 hours. Can't wait to hear about your vision!</p>
       </motion.div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 border-[50px] border-white">
+    <div className="max-w-2xl mx-auto p-6 border-[25px] border-white">
       {/* Progress indicator */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700">Step {currentStep} of 3</span>
-          <span className="text-sm text-gray-500">{Math.round((currentStep / 3) * 100)}% Complete</span>
+          <span className="text-sm font-medium text-white">Step {currentStep} of 3</span>
+          <span className="text-sm text-white/70">{Math.round((currentStep / 3) * 100)}% Complete</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <motion.div 
@@ -467,8 +467,8 @@ export default function HomepageInquiryForm() {
             className={`
               px-6 py-3 rounded-lg font-medium transition-all duration-200
               ${currentStep === 1 
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:shadow-md'
+                ? 'bg-gray-100/10 text-gray-400 cursor-not-allowed' 
+                : 'bg-transparent border border-gray-500 text-gray-300 hover:border-white hover:text-white'
               }
               focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
             `}
