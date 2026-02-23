@@ -163,7 +163,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           id="projectDescription"
           rows={4}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
-          placeholder="Describe the problem we are solving, your target audience, and what you hope to achieve."
+          placeholder="Describe your project, the problem we are solving, your target audience, and what you hope to achieve."
           aria-invalid={errors.projectDescription ? 'true' : 'false'}
           aria-describedby={errors.projectDescription ? 'projectDescription-error' : undefined}
         />
@@ -182,7 +182,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           id="brandDescription"
           rows={4}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
-          placeholder="What are your core values or mission? What makes your brand unique?"
+          placeholder="What is your dream design? What color pallatte fits you and your brand, and what style do you want(Modern, chic, rustic)?"
           aria-invalid={errors.brandDescription ? 'true' : 'false'}
           aria-describedby={errors.brandDescription ? 'brandDescription-error' : undefined}
         />
@@ -388,12 +388,13 @@ export default function HomepageInquiryForm() {
 
   if (submissionSuccess) {
     return (
-      <motion.div 
-        className="max-w-2xl mx-auto p-8 text-center border-[25px] border-white"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="max-w-2xl mx-auto p-[15px] bg-gradient-to-r from-[var(--color-coral-500)] to-white rounded-lg bg-opacity-20">
+        <motion.div 
+          className="bg-warmgray-900 p-8 rounded-lg text-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
         <div className="relative inline-block mb-6">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -424,12 +425,14 @@ export default function HomepageInquiryForm() {
         <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
         <p className="text-lg text-white/80 mb-2">Your project inquiry has been submitted successfully.</p>
         <p className="text-white/60">I'll get back to you within 24-48 hours. Can't wait to hear about your vision!</p>
-      </motion.div>
+        </motion.div>
+      </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 border-[25px] border-white">
+    <div className="max-w-2xl mx-auto p-[15px] bg-gradient-to-r from-[var(--color-coral-500)] to-white rounded-lg bg-opacity-20">
+      <div className="bg-warmgray-900 p-6 rounded-lg">
       {/* Progress indicator */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
@@ -502,6 +505,7 @@ export default function HomepageInquiryForm() {
           )}
         </div>
       </form>
+      </div>
     </div>
   );
 }
