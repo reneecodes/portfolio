@@ -44,7 +44,7 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('fullName')}
           id="fullName"
           type="text"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm"
           placeholder="Enter your full name"
           aria-invalid={errors.fullName ? 'true' : 'false'}
           aria-describedby={errors.fullName ? 'fullName-error' : undefined}
@@ -62,7 +62,7 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('emailAddress')}
           id="emailAddress"
           type="email"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm"
           placeholder="your.email@example.com"
           aria-invalid={errors.emailAddress ? 'true' : 'false'}
           aria-describedby={errors.emailAddress ? 'emailAddress-error' : undefined}
@@ -88,10 +88,10 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
               />
               <div className={`
                 p-4 rounded-lg border-2 transition-all duration-200
-                ${selectedProjectType === type 
-                  ? 'border-purple-500 bg-purple-900/50 text-white shadow-md' 
-                  : 'border-gray-500 bg-transparent text-gray-300 hover:border-white hover:text-white'
-                }
+                  ${selectedProjectType === type 
+                    ? 'border-purple-500 bg-purple-900/60 backdrop-blur-sm text-white shadow-md' 
+                    : 'border-gray-500 bg-black/20 text-gray-300 hover:border-white hover:text-white'
+                  }
                 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2
               `}>
                 <div className="font-medium text-center">{type}</div>
@@ -162,7 +162,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('projectDescription')}
           id="projectDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm resize-none"
           placeholder="Describe your project, the problem we are solving, your target audience, and what you hope to achieve."
           aria-invalid={errors.projectDescription ? 'true' : 'false'}
           aria-describedby={errors.projectDescription ? 'projectDescription-error' : undefined}
@@ -181,7 +181,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('brandDescription')}
           id="brandDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm resize-none"
           placeholder="What is your dream design? What color pallatte fits you and your brand, and what style do you want(Modern, chic, rustic)?"
           aria-invalid={errors.brandDescription ? 'true' : 'false'}
           aria-describedby={errors.brandDescription ? 'brandDescription-error' : undefined}
@@ -199,7 +199,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
         <select
           {...register('primaryGoal')}
           id="primaryGoal"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white shadow-sm"
           aria-invalid={errors.primaryGoal ? 'true' : 'false'}
           aria-describedby={errors.primaryGoal ? 'primaryGoal-error' : undefined}
         >
@@ -235,7 +235,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
         <select
           {...register('timeframe')}
           id="timeframe"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white shadow-sm"
           aria-invalid={errors.timeframe ? 'true' : 'false'}
           aria-describedby={errors.timeframe ? 'timeframe-error' : undefined}
         >
@@ -257,7 +257,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('budgetRange')}
           id="budgetRange"
           type="text"
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm"
           placeholder="e.g., $5000-10000"
           aria-invalid={errors.budgetRange ? 'true' : 'false'}
           aria-describedby={errors.budgetRange ? 'budgetRange-error' : undefined}
@@ -275,7 +275,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('additionalInfo')}
           id="additionalInfo"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-transparent text-white placeholder:text-gray-400 shadow-sm resize-none"
+          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm resize-none"
           placeholder="Links to current site, competitors you admire, specific features you envision, preferred technologies, etc."
           aria-invalid={errors.additionalInfo ? 'true' : 'false'}
           aria-describedby={errors.additionalInfo ? 'additionalInfo-error' : undefined}
@@ -390,7 +390,7 @@ export default function HomepageInquiryForm() {
     return (
       <div className="max-w-2xl mx-auto relative rounded-lg isolate">
         <div className="absolute -z-10 inset-0 rounded-[inherit] [--angle:0deg] [animation:rotate_4s_linear_infinite] bg-[conic-gradient(from_var(--angle),#ff5722,#e91e63,#9c27b0,#ff5722)] blur-[15px]"></div>
-        <div className="h-full w-full bg-warmgray-900 rounded-[inherit] p-8">
+        <div className="h-full w-full bg-neutral-900/60 backdrop-blur-xl border-t border-t-white/10 rounded-[inherit] p-8">
           <motion.div 
             className="text-center"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -436,7 +436,7 @@ export default function HomepageInquiryForm() {
   return (
     <div className="max-w-2xl mx-auto relative rounded-lg isolate">
       <div className="absolute -z-10 inset-0 rounded-[inherit] [--angle:0deg] [animation:rotate_4s_linear_infinite] bg-[conic-gradient(from_var(--angle),#ff5722,#e91e63,#9c27b0,#ff5722)] blur-[15px]"></div>
-      <div className="h-full w-full bg-warmgray-900 rounded-[inherit] p-6">
+      <div className="h-full w-full bg-neutral-900/60 backdrop-blur-xl border-t border-t-white/10 rounded-[inherit] p-6">
         {/* Progress indicator */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
@@ -475,7 +475,7 @@ export default function HomepageInquiryForm() {
               px-6 py-3 rounded-lg font-medium transition-all duration-200
               ${currentStep === 1 
                 ? 'bg-gray-100/10 text-gray-400 cursor-not-allowed' 
-                : 'bg-transparent border border-gray-500 text-gray-300 hover:border-white hover:text-white'
+                : 'bg-black/20 border border-gray-500 text-gray-300 hover:border-white hover:text-white'
               }
               focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
             `}
@@ -487,7 +487,7 @@ export default function HomepageInquiryForm() {
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              className="px-6 py-3 bg-purple-600/60 backdrop-blur-sm border border-purple-500/50 text-white rounded-lg font-medium hover:bg-purple-700/80 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
             >
               Next
             </button>
@@ -499,7 +499,7 @@ export default function HomepageInquiryForm() {
                 px-6 py-3 rounded-lg font-medium transition-all duration-200
                 ${isSubmitting 
                   ? 'bg-gray-400 text-white cursor-not-allowed' 
-                  : 'bg-purple-600 text-white hover:bg-purple-700 hover:shadow-md'
+                  : 'bg-purple-600/60 backdrop-blur-sm border border-purple-500/50 text-white hover:bg-purple-700/80 hover:shadow-md'
                 }
                 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
               `}
