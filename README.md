@@ -60,6 +60,7 @@ The portfolio includes a sophisticated inquiry form with:
 - **Smooth Animations:** Framer-motion powered transitions between steps
 - **Responsive Design:** Optimized for all screen sizes
 - **Type Safety:** Full TypeScript integration with Zod validation
+- **Elegant Container:** The form is housed within a container that features a subtle, 15px gradient border blending from coral to white, creating a modern, "almost-there" aesthetic. The form itself has a dark, semi-transparent background to ensure text legibility.
 
 ## 📂 Project Structure
 ```
