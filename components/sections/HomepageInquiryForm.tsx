@@ -388,57 +388,61 @@ export default function HomepageInquiryForm() {
 
   if (submissionSuccess) {
     return (
-      <div className="max-w-2xl mx-auto p-[15px] bg-gradient-to-r from-[var(--color-coral-500)] to-white rounded-lg bg-opacity-20">
-        <motion.div 
-          className="bg-warmgray-900 p-8 rounded-lg text-center"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-        <div className="relative inline-block mb-6">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          {sparkleValues.map((sparkle, index) => (
-            <motion.div
-              key={index}
-              className="absolute w-2 h-2 bg-yellow-400 rounded-full"
-              style={{
-                left: `${sparkle.left}%`,
-                top: `${sparkle.top}%`,
-              }}
-              animate={{
-                scale: [0, 1, 0],
-                opacity: [0, 1, 0],
-              }}
-              transition={{
-                duration: 2,
-                delay: sparkle.delay,
-                repeat: Infinity,
-                repeatDelay: 1,
-              }}
-            />
-          ))}
+      <div className="max-w-2xl mx-auto relative rounded-lg isolate">
+        <div className="absolute -z-10 inset-0 rounded-[inherit] [--angle:0deg] [animation:rotate_4s_linear_infinite] bg-[conic-gradient(from_var(--angle),#ff5722,#e91e63,#9c27b0,#ff5722)] blur-[15px]"></div>
+        <div className="h-full w-full bg-warmgray-900 rounded-[inherit] p-8">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="relative inline-block mb-6">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              {sparkleValues.map((sparkle, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute w-2 h-2 bg-yellow-400 rounded-full"
+                  style={{
+                    left: `${sparkle.left}%`,
+                    top: `${sparkle.top}%`,
+                  }}
+                  animate={{
+                    scale: [0, 1, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    delay: sparkle.delay,
+                    repeat: Infinity,
+                    repeatDelay: 1,
+                  }}
+                />
+              ))}
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
+            <p className="text-lg text-white/80 mb-2">Your project inquiry has been submitted successfully.</p>
+            <p className="text-white/60">I'll get back to you within 24-48 hours. Can't wait to hear about your vision!</p>
+          </motion.div>
         </div>
-        <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
-        <p className="text-lg text-white/80 mb-2">Your project inquiry has been submitted successfully.</p>
-        <p className="text-white/60">I'll get back to you within 24-48 hours. Can't wait to hear about your vision!</p>
-        </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-[15px] bg-gradient-to-r from-[var(--color-coral-500)] to-white rounded-lg bg-opacity-20">
-      <div className="bg-warmgray-900 p-6 rounded-lg">
-      {/* Progress indicator */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-white">Step {currentStep} of 3</span>
-          <span className="text-sm text-white/70">{Math.round((currentStep / 3) * 100)}% Complete</span>
-        </div>
+    <div className="max-w-2xl mx-auto relative rounded-lg isolate">
+      <div className="absolute -z-10 inset-0 rounded-[inherit] [--angle:0deg] [animation:rotate_4s_linear_infinite] bg-[conic-gradient(from_var(--angle),#ff5722,#e91e63,#9c27b0,#ff5722)] blur-[15px]"></div>
+      <div className="h-full w-full bg-warmgray-900 rounded-[inherit] p-6">
+        {/* Progress indicator */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-white">Step {currentStep} of 3</span>
+            <span className="text-sm text-white/70">{Math.round((currentStep / 3) * 100)}% Complete</span>
+          </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <motion.div 
             className="bg-purple-600 h-2 rounded-full"
