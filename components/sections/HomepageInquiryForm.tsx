@@ -44,13 +44,13 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('fullName')}
           id="fullName"
           type="text"
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="Enter your full name"
           aria-invalid={errors.fullName ? 'true' : 'false'}
           aria-describedby={errors.fullName ? 'fullName-error' : undefined}
         />
         {errors.fullName && (
-          <p id="fullName-error" className="text-sm text-red-600 mt-1">{errors.fullName.message}</p>
+          <p id="fullName-error" className="text-sm text-red-400 mt-2">{errors.fullName.message}</p>
         )}
       </div>
 
@@ -62,13 +62,13 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('emailAddress')}
           id="emailAddress"
           type="email"
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="your.email@example.com"
           aria-invalid={errors.emailAddress ? 'true' : 'false'}
           aria-describedby={errors.emailAddress ? 'emailAddress-error' : undefined}
         />
         {errors.emailAddress && (
-          <p id="emailAddress-error" className="text-sm text-red-600 mt-1">{errors.emailAddress.message}</p>
+          <p id="emailAddress-error" className="text-sm text-red-400 mt-2">{errors.emailAddress.message}</p>
         )}
       </div>
 
@@ -76,31 +76,33 @@ function Step1({ form }: { form: UseFormReturn<InquiryFormData> }) {
         <label className="block text-sm font-medium text-white">
           Project Type *
         </label>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-required="true">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" role="radiogroup" aria-required="true">
           {PROJECT_TYPES.map((type) => (
-            <label key={type} className="relative cursor-pointer">
-              <input
-                {...register('projectType')}
-                type="radio"
-                value={type}
-                className="sr-only"
-                aria-invalid={errors.projectType ? 'true' : 'false'}
-              />
-              <div className={`
-                p-4 rounded-lg border-2 transition-all duration-200
+            <motion.div key={type} whileTap={{ scale: 0.97 }}>
+              <label className="relative cursor-pointer">
+                <input
+                  {...register('projectType')}
+                  type="radio"
+                  value={type}
+                  className="sr-only"
+                  aria-invalid={errors.projectType ? 'true' : 'false'}
+                />
+                <div className={`
+                  flex items-center justify-center p-4 rounded-lg border-2 transition-all duration-200
                   ${selectedProjectType === type 
-                    ? 'border-purple-500 bg-purple-900/60 backdrop-blur-sm text-white shadow-md' 
-                    : 'border-gray-500 bg-black/20 text-gray-300 hover:border-white hover:text-white'
+                    ? 'bg-purple-500/20 border-purple-500 text-white shadow-md' 
+                    : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20'
                   }
-                focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2
-              `}>
-                <div className="font-medium text-center">{type}</div>
-              </div>
-            </label>
+                  focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-2
+                `}>
+                  <span className="font-medium text-center">{type}</span>
+                </div>
+              </label>
+            </motion.div>
           ))}
         </div>
         {errors.projectType && (
-          <p id="projectType-error" className="text-sm text-red-600">{errors.projectType.message}</p>
+          <p id="projectType-error" className="text-sm text-red-400 mt-2">{errors.projectType.message}</p>
         )}
       </div>
     </motion.div>
@@ -140,7 +142,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
                     {...register('websiteScope')}
                     type="radio"
                     value={scope}
-                    className="mr-3 text-purple-600 focus:ring-purple-500 h-4 w-4"
+                    className="mr-3 h-4 w-4 text-purple-600 bg-white/10 border-white/20 focus:ring-purple-500"
                     aria-invalid={errors.websiteScope ? 'true' : 'false'}
                   />
                   <span className="text-white">{scope}</span>
@@ -148,7 +150,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
               ))}
             </div>
             {errors.websiteScope && (
-              <p id="websiteScope-error" className="text-sm text-red-600">{errors.websiteScope.message}</p>
+              <p id="websiteScope-error" className="text-sm text-red-400 mt-2">{errors.websiteScope.message}</p>
             )}
           </motion.div>
         )}
@@ -162,14 +164,14 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('projectDescription')}
           id="projectDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm resize-none"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
           placeholder="Describe your project, the problem we are solving, your target audience, and what you hope to achieve."
           aria-invalid={errors.projectDescription ? 'true' : 'false'}
           aria-describedby={errors.projectDescription ? 'projectDescription-error' : undefined}
         />
-        <p className="text-xs text-white">Minimum 50 characters</p>
+        <p className="text-xs text-white/70">Minimum 50 characters</p>
         {errors.projectDescription && (
-          <p id="projectDescription-error" className="text-sm text-red-600">{errors.projectDescription.message}</p>
+          <p id="projectDescription-error" className="text-sm text-red-400 mt-2">{errors.projectDescription.message}</p>
         )}
       </div>
 
@@ -181,14 +183,14 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('brandDescription')}
           id="brandDescription"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm resize-none"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
           placeholder="What is your dream design? What color pallatte fits you and your brand, and what style do you want(Modern, chic, rustic)?"
           aria-invalid={errors.brandDescription ? 'true' : 'false'}
           aria-describedby={errors.brandDescription ? 'brandDescription-error' : undefined}
         />
-        <p className="text-xs text-white">Minimum 30 characters</p>
+        <p className="text-xs text-white/70">Minimum 30 characters</p>
         {errors.brandDescription && (
-          <p id="brandDescription-error" className="text-sm text-red-600">{errors.brandDescription.message}</p>
+          <p id="brandDescription-error" className="text-sm text-red-400 mt-2">{errors.brandDescription.message}</p>
         )}
       </div>
 
@@ -199,7 +201,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
         <select
           {...register('primaryGoal')}
           id="primaryGoal"
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white shadow-sm"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
           aria-invalid={errors.primaryGoal ? 'true' : 'false'}
           aria-describedby={errors.primaryGoal ? 'primaryGoal-error' : undefined}
         >
@@ -209,7 +211,7 @@ function Step2({ form }: { form: UseFormReturn<InquiryFormData> }) {
           ))}
         </select>
         {errors.primaryGoal && (
-          <p id="primaryGoal-error" className="text-sm text-red-600">{errors.primaryGoal.message}</p>
+          <p id="primaryGoal-error" className="text-sm text-red-400 mt-2">{errors.primaryGoal.message}</p>
         )}
       </div>
     </motion.div>
@@ -235,7 +237,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
         <select
           {...register('timeframe')}
           id="timeframe"
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white shadow-sm"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
           aria-invalid={errors.timeframe ? 'true' : 'false'}
           aria-describedby={errors.timeframe ? 'timeframe-error' : undefined}
         >
@@ -245,7 +247,7 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           ))}
         </select>
         {errors.timeframe && (
-          <p id="timeframe-error" className="text-sm text-red-600">{errors.timeframe.message}</p>
+          <p id="timeframe-error" className="text-sm text-red-400 mt-2">{errors.timeframe.message}</p>
         )}
       </div>
 
@@ -257,13 +259,13 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('budgetRange')}
           id="budgetRange"
           type="text"
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="e.g., $5000-10000"
           aria-invalid={errors.budgetRange ? 'true' : 'false'}
           aria-describedby={errors.budgetRange ? 'budgetRange-error' : undefined}
         />
         {errors.budgetRange && (
-          <p id="budgetRange-error" className="text-sm text-red-600">{errors.budgetRange.message}</p>
+          <p id="budgetRange-error" className="text-sm text-red-400 mt-2">{errors.budgetRange.message}</p>
         )}
       </div>
 
@@ -275,13 +277,13 @@ function Step3({ form }: { form: UseFormReturn<InquiryFormData> }) {
           {...register('additionalInfo')}
           id="additionalInfo"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300/20 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 bg-black/20 text-white placeholder:text-gray-400 shadow-sm resize-none"
+          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
           placeholder="Links to current site, competitors you admire, specific features you envision, preferred technologies, etc."
           aria-invalid={errors.additionalInfo ? 'true' : 'false'}
           aria-describedby={errors.additionalInfo ? 'additionalInfo-error' : undefined}
         />
         {errors.additionalInfo && (
-          <p id="additionalInfo-error" className="text-sm text-red-600">{errors.additionalInfo.message}</p>
+          <p id="additionalInfo-error" className="text-sm text-red-400 mt-2">{errors.additionalInfo.message}</p>
         )}
       </div>
     </motion.div>
@@ -390,43 +392,24 @@ export default function HomepageInquiryForm() {
     return (
       <div className="max-w-2xl mx-auto relative rounded-lg isolate">
         <div className="absolute -z-10 inset-0 rounded-[inherit] [--angle:0deg] [animation:rotate_4s_linear_infinite] bg-[conic-gradient(from_var(--angle),#ff5722,#e91e63,#9c27b0,#ff5722)] blur-[15px]"></div>
-        <div className="h-full w-full bg-neutral-900/60 backdrop-blur-xl border-t border-t-white/10 rounded-[inherit] p-8">
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+        <div className="h-full w-full bg-warmgray-900/70 backdrop-blur-xl rounded-[inherit] p-8 border-t border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="text-center"
           >
-            <div className="relative inline-block mb-6">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              {sparkleValues.map((sparkle, index) => (
-                <motion.div
-                  key={index}
-                  className="absolute w-2 h-2 bg-yellow-400 rounded-full"
-                  style={{
-                    left: `${sparkle.left}%`,
-                    top: `${sparkle.top}%`,
-                  }}
-                  animate={{
-                    scale: [0, 1, 0],
-                    opacity: [0, 1, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    delay: sparkle.delay,
-                    repeat: Infinity,
-                    repeatDelay: 1,
-                  }}
-                />
-              ))}
+            <div className="inline-block bg-purple-500/20 text-purple-300 rounded-full p-3 mb-4">
+              <Check size={40} />
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
-            <p className="text-lg text-white/80 mb-2">Your project inquiry has been submitted successfully.</p>
-            <p className="text-white/60">I'll get back to you within 24-48 hours. Can't wait to hear about your vision!</p>
+            <h2 className="text-3xl font-bold text-white mb-2">Thank You!</h2>
+            <p className="text-white/80 mb-6">Your inquiry has been submitted successfully. I'll be in touch within 24-48 hours.</p>
+            <button
+              onClick={() => setSubmissionSuccess(false)} // This should ideally reset the entire form state
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-warmgray-900"
+            >
+              Submit Another Inquiry
+            </button>
           </motion.div>
         </div>
       </div>
@@ -436,16 +419,16 @@ export default function HomepageInquiryForm() {
   return (
     <div className="max-w-2xl mx-auto relative rounded-lg isolate">
       <div className="absolute -z-10 inset-0 rounded-[inherit] [--angle:0deg] [animation:rotate_4s_linear_infinite] bg-[conic-gradient(from_var(--angle),#ff5722,#e91e63,#9c27b0,#ff5722)] blur-[15px]"></div>
-      <div className="h-full w-full bg-neutral-900/60 backdrop-blur-xl border-t border-t-white/10 rounded-[inherit] p-6">
+      <div className="h-full w-full bg-warmgray-900/70 backdrop-blur-xl rounded-[inherit] p-6 border-t border-white/10">
         {/* Progress indicator */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-white">Step {currentStep} of 3</span>
             <span className="text-sm text-white/70">{Math.round((currentStep / 3) * 100)}% Complete</span>
           </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-full bg-white/10 rounded-full h-2">
           <motion.div 
-            className="bg-purple-600 h-2 rounded-full"
+            className="bg-purple-500 h-2 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${(currentStep / 3) * 100}%` }}
             transition={{ duration: 0.3 }}
@@ -461,8 +444,8 @@ export default function HomepageInquiryForm() {
         </AnimatePresence>
 
         {errors.submit && (
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-            <p className="text-red-600">{errors.submit}</p>
+          <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4">
+            <p className="text-red-300">{errors.submit}</p>
           </div>
         )}
 
@@ -474,10 +457,10 @@ export default function HomepageInquiryForm() {
             className={`
               px-6 py-3 rounded-lg font-medium transition-all duration-200
               ${currentStep === 1 
-                ? 'bg-gray-100/10 text-gray-400 cursor-not-allowed' 
-                : 'bg-black/20 border border-gray-500 text-gray-300 hover:border-white hover:text-white'
+                ? 'bg-white/5 text-gray-400 cursor-not-allowed' 
+                : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
               }
-              focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
+              focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-warmgray-900
             `}
           >
             Back
@@ -487,7 +470,7 @@ export default function HomepageInquiryForm() {
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-3 bg-purple-600/60 backdrop-blur-sm border border-purple-500/50 text-white rounded-lg font-medium hover:bg-purple-700/80 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-warmgray-900"
             >
               Next
             </button>
@@ -499,9 +482,9 @@ export default function HomepageInquiryForm() {
                 px-6 py-3 rounded-lg font-medium transition-all duration-200
                 ${isSubmitting 
                   ? 'bg-gray-400 text-white cursor-not-allowed' 
-                  : 'bg-purple-600/60 backdrop-blur-sm border border-purple-500/50 text-white hover:bg-purple-700/80 hover:shadow-md'
+                  : 'bg-purple-600 text-white hover:bg-purple-700 hover:shadow-md'
                 }
-                focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
+                focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-warmgray-900
               `}
             >
               {isSubmitting ? 'Submitting...' : 'Submit Project Inquiry'}
