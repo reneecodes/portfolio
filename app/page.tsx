@@ -15,8 +15,8 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
-        <HomepageInquiryForm />
         <Contact />
+        <HomepageInquiryForm />
       </main>
     </div>
   );
