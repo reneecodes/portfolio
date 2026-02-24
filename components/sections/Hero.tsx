@@ -15,18 +15,16 @@ export default function Hero() {
               <span className="inline-block py-1 px-3 rounded-full bg-primary-light/10 text-primary dark:text-primary-light text-sm font-semibold tracking-wide uppercase mb-6 border border-primary-light/20">
                 UX Designer
               </span>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-warmgray-900 dark:text-warmgray-100 mb-6 leading-[1.1]">
-                Designing for <br className="hidden md:block" />
-                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
-                  human clarity.
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-warmgray-900 dark:text-warmgray-100 mb-6 leading-tight antialiased">
+                Where high-end <br className="hidden md:block" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                  precision meets personality.
                 </span>
               </h1>
             </div>
             
-            <p className="animate-fade-in-up delay-100 text-xl md:text-2xl text-warmgray-600 dark:text-warmgray-400 mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0 font-light">
-              Hi, I&apos;m Renee. I specialize in turning complex data into intuitive, 
-              <span className="text-warmgray-900 dark:text-warmgray-200 font-medium"> invisible </span> 
-              digital experiences.
+            <p className="animate-fade-in-up delay-100 text-xl md:text-2xl text-warmgray-600 dark:text-warmgray-400 mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0 font-light antialiased">
+              I&apos;m Renee—I craft polished, trend-forward designs that prove &quot;simple&quot; doesn&apos;t have to be &quot;boring.&quot; Let&apos;s turn your complex ideas into a digital joyride that users actually love. 🚀
             </p>
             
             <div className="animate-fade-in-up delay-200 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
