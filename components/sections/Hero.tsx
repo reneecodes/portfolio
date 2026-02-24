@@ -16,15 +16,15 @@ export default function Hero() {
                 UX Designer
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-warmgray-900 dark:text-warmgray-100 mb-6 leading-tight antialiased">
-                Where high-end <br className="hidden md:block" />
+                Bringing digital dreams to life, <br className="hidden md:block" />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                  precision meets personality.
+                  one pixel at a time.
                 </span>
               </h1>
             </div>
             
             <p className="animate-fade-in-up delay-100 text-xl md:text-2xl text-warmgray-600 dark:text-warmgray-400 mb-10 leading-relaxed max-w-2xl mx-auto md:mx-0 font-light antialiased">
-              I&apos;m Renee—I craft polished, trend-forward designs that prove &quot;simple&quot; doesn&apos;t have to be &quot;boring.&quot; Let&apos;s turn your complex ideas into a digital joyride that users actually love. 🚀
+              Hi, I&apos;m Renee! I’m a detail-obsessed designer blending the latest 2026 trends with a playful touch to create interfaces that feel effortlessly beautiful and intuitively sweet. ✨
             </p>
             
             <div className="animate-fade-in-up delay-200 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
