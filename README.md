@@ -60,9 +60,7 @@ The portfolio includes a sophisticated inquiry form with:
 - **Smooth Animations:** Framer-motion powered transitions between steps
 - **Responsive Design:** Optimized for all screen sizes
 - **Type Safety:** Full TypeScript integration with Zod validation
-- **"True Match" Glass Effect:** The form is presented in a stunning glassmorphism container. It uses a `bg-warmgray-900/70` background with a `backdrop-blur-xl` effect, making it feel like a frosted glass panel floating over the website's background.
-- **Dynamic Gradient Border:** A vibrant, animated conic-gradient border (Orange/Purple/Pink) rotates infinitely around the form, creating a sophisticated flow of color. This is enhanced by a matching neon-glow `box-shadow` that radiates outward.
-- **Refined UI Elements:** Inputs, text areas, and selection cards have a subtle `bg-white/5` tint, making them appear "etched" into the glass. A sharp `1px` top border with `10%` white opacity adds a final, light-catching detail to the container.
+- **Elegant Container:** The form is housed within a container that features a subtle, 15px gradient border blending from coral to white, creating a modern, "almost-there" aesthetic. The form itself has a dark, semi-transparent background to ensure text legibility.
 
 ## 📂 Project Structure
 ```
