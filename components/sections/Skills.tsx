@@ -61,7 +61,7 @@ const skillsData: SkillCategory[] = [
           { name: 'Gemini', proficiency: 'Proficient' },
           { name: 'ChatGPT', proficiency: 'Proficient' },
           { name: 'Trae', proficiency: 'Intermediate' },
-          { name: 'Midjourney', proficiency: 'Proficient' },
+          { name: 'Midjourney', proficiency: 'Beginner' },
           { name: 'Prompt Engineering', proficiency: 'Excellent' },
         ],
       },
@@ -74,8 +74,8 @@ const skillsData: SkillCategory[] = [
       {
         title: 'Development & Collaboration',
         skills: [
-          { name: 'Git & GitHub', proficiency: 'Proficient' },
-          { name: 'VS Code', proficiency: 'Proficient' },
+          { name: 'Git & GitHub', proficiency: 'Intermediate' },
+          { name: 'VS Code', proficiency: 'Intermediate' },
           { name: 'Technical Handoff', proficiency: 'Intermediate' },
           { name: 'Component Architecture', proficiency: 'Intermediate' },
           { name: 'Web Standards', proficiency: 'Intermediate' },
@@ -105,9 +105,9 @@ const skillsData: SkillCategory[] = [
         title: 'Communication & Management',
         skills: [
           { name: 'Slack', proficiency: 'Beginner' },
-          { name: 'Notion', proficiency: 'Expert' },
+          { name: 'Notion', proficiency: 'Familiar' },
           { name: 'Miro', proficiency: 'Intermediate' },
-          { name: 'Loom', proficiency: 'Beginner' },
+          { name: 'Loom', proficiency: 'Familiar' },
           { name: 'Documentation', proficiency: 'Intermediate' },
         ],
       },

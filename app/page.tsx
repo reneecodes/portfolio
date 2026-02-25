@@ -1,10 +1,10 @@
-import Hero from '@/components/sections/Hero';
-import About from '@/components/sections/About';
-import Experience from '@/components/sections/Experience';
-import Skills from '@/components/sections/Skills';
-import Projects from '@/components/sections/Projects';
-import Contact from '@/components/sections/Contact';
-import HomepageInquiryForm from '@/components/sections/HomepageInquiryForm';
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Experience from "@/components/sections/Experience";
+import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
+import HomepageInquiryForm from "@/components/sections/HomepageInquiryForm";
 
 export default function Home() {
   return (
@@ -15,14 +15,8 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
-        <div className="flex flex-col lg:flex-row">
-          <div className="w-full lg:w-3/5">
-            <HomepageInquiryForm />
-          </div>
-          <div className="w-full lg:w-2/5">
-            <Contact />
-          </div>
-        </div>
+        <Contact />
+        <HomepageInquiryForm />
       </main>
     </div>
   );
