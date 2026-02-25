@@ -15,8 +15,10 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
-        <Contact />
-        <HomepageInquiryForm />
+        <div className="flex flex-col"> 
+          <Contact />
+          <HomepageInquiryForm />
+        </div>
       </main>
     </div>
   );
