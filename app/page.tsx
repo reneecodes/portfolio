@@ -15,9 +15,13 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
-        <div className="flex flex-col"> 
-          <Contact />
-          <HomepageInquiryForm />
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-3/5">
+            <HomepageInquiryForm />
+          </div>
+          <div className="w-full lg:w-2/5">
+            <Contact />
+          </div>
         </div>
       </main>
     </div>
