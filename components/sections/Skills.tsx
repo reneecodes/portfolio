@@ -60,12 +60,12 @@ const skillsData: SkillCategory[] = [
         skills: [
           { name: 'Gemini', proficiency: 'Proficient' },
           { name: 'ChatGPT', proficiency: 'Proficient' },
-          { name: 'Trae', proficiency: 'Intermediate' },
+          { name: 'Claude', proficiency: 'Excellent' },
           { name: 'Midjourney', proficiency: 'Beginner' },
           { name: 'Prompt Engineering', proficiency: 'Excellent' },
         ],
       },
-    ],
+    ], 
   },
   {
     title: 'Tech Workflow',
